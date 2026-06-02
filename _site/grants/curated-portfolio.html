@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}Residency Curation Submission - {% endif %}Artist Name</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="Artist Name">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Typography & Layout Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/raster2.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  <style>
+    /* Integrate Google Fonts dynamically into our main layout */
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+    }
+    code, pre, .mono, nav a, footer {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper" style="padding-top: 30px;">
+    <!-- Responsive 9-Column Navigation Grid -->
+    <nav style="margin-bottom: 4rem; border-bottom: 0.5px solid #222; padding-bottom: 20px; max-width: 42rem; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;">
+      <r-grid columns="9" columns-s="3" style="--columnGap: 10px; --rowGap: 15px; text-align: center;">
+        <r-cell><a href="/" class="mono" style="font-size: 0.8rem; border:none;">PROJECTS</a></r-cell>
+        <r-cell><a href="/workshops.html" class="mono" style="font-size: 0.8rem; border:none;">WORKSHOPS</a></r-cell>
+        <r-cell><a href="/music.html" class="mono" style="font-size: 0.8rem; border:none;">MUSIC</a></r-cell>
+        <r-cell><a href="/about.html" class="mono" style="font-size: 0.8rem; border:none;">BIO</a></r-cell>
+        <r-cell><a href="/resume.html" class="mono" style="font-size: 0.8rem; border:none;">RESUME</a></r-cell>
+        <r-cell><a href="/exhibitions.html" class="mono" style="font-size: 0.8rem; border:none;">EXHIBITIONS</a></r-cell>
+        <r-cell><a href="/residencies.html" class="mono" style="font-size: 0.8rem; border:none;">RESIDENCIES</a></r-cell>
+        <r-cell><a href="/events.html" class="mono" style="font-size: 0.8rem; border:none;">EVENTS</a></r-cell>
+        <r-cell><a href="/writings.html" class="mono" style="font-size: 0.8rem; border:none;">WRITINGS</a></r-cell>
+      </r-grid>
+    </nav>
+
+    
+<div class="curated-portfolio-page">
+
+  <main>
+    <h1 style="font-size: 1.8rem; margin-bottom: 10px; color: #ffffff;">Residency Curation Submission</h1>
+    <p class="quote" style="margin-bottom: 3rem; color: #999999; border-left: 2px solid #333; padding-left: 15px;">This curated portfolio highlights key interactive signal mappings and organic structural installations developed as template pieces. It illustrates the progression from earlier biological sculpture investigations (Project 2) to real-time interactive electronics (Project 1).</p><hr>
+    
+    <!-- Render selected projects -->
+    
+                        <article class="curated-item" style="margin-bottom: 6rem;">
+                          <div style="background-color: #0b0b0b; border-bottom: 0.5px solid #222; padding: 10px 0; display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5rem;">
+                            <h2 style="font-size: 1.25rem; display: inline; color: #ffffff; margin:0;">Project Title 2 (Archived)</h2>
+                            <span class="mono" style="font-size: 0.8rem; color: #666666;">2024 &middot; Different City, Country</span>
+                          </div>
+                          
+                          <div class="gallery" style="margin-bottom: 1.5rem;">
+                            <r-cell id="project-2-header" class="header" style="height: 50vh; min-height: 50vh;">
+                              <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Project Title 2 (Archived)">
+                            </r-cell>
+                            <br>
+                            <r-grid columns="6" columns-s="3" style="--columnGap: 8px; --rowGap: 8px;">
+                              
+                                <r-cell class="gallery-thumb project-2 active" onclick="cellClick(this, 'project-2')">
+                                  
+                                    <div class="_header" style="display:none;">
+                                      <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Project Title 2 (Archived)">
+                                    </div>
+                                  
+                                    <figure style="margin:0; height:100%; position: relative;">
+                                      <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Thumbnail">
+                                    </figure>
+                                </r-cell>
+
+                                <r-cell class="gallery-thumb project-2 " onclick="cellClick(this, 'project-2')">
+                                  
+                                    <div class="_header" style="display:none;">
+                                      <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Project Title 2 (Archived)">
+                                    </div>
+                                  
+                                    <figure style="margin:0; height:100%; position: relative;">
+                                      <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Thumbnail">
+                                    </figure>
+                                </r-cell>
+                            </r-grid>
+                          </div>
+                          
+                          <div class="project-description" style="font-size: 0.95rem; line-height: 1.6; color: rgb(160, 160, 160);">
+                            
+
+<p>This project represents an earlier exploratory phase focusing on static bio-sculptures and organic textures.</p>
+
+<p>Created during a summer residency, the installation examined the decomposition of raw vegetable fibers over a period of 40 days.</p>
+
+<h3>Exhibition Venues</h3>
+<ol>
+  <li>Creative Arts Lab, City Gallery, 2024.</li>
+  <li>BioMedia Art Space, 2024.</li>
+</ol>
+
+                          </div>
+                        </article>
+
+                        <article class="curated-item" style="margin-bottom: 6rem;">
+                          <div style="background-color: #0b0b0b; border-bottom: 0.5px solid #222; padding: 10px 0; display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5rem;">
+                            <h2 style="font-size: 1.25rem; display: inline; color: #ffffff; margin:0;">Project Title 1</h2>
+                            <span class="mono" style="font-size: 0.8rem; color: #666666;">2026 &middot; City, Country</span>
+                          </div>
+                          
+                          <div class="gallery" style="margin-bottom: 1.5rem;">
+                            <r-cell id="project-1-header" class="header" style="height: 50vh; min-height: 50vh;">
+                              <img src="https://images.unsplash.com/photo-1547891654-e66ed7edd96c?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Project Title 1">
+                            </r-cell>
+                            <br>
+                            <r-grid columns="6" columns-s="3" style="--columnGap: 8px; --rowGap: 8px;">
+                              
+                                <r-cell class="gallery-thumb project-1 active" onclick="cellClick(this, 'project-1')">
+                                  
+                                    <div class="_header" style="display:none;">
+                                      <img src="https://images.unsplash.com/photo-1547891654-e66ed7edd96c?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Project Title 1">
+                                    </div>
+                                  
+                                    <figure style="margin:0; height:100%; position: relative;">
+                                      <img src="https://images.unsplash.com/photo-1547891654-e66ed7edd96c?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Thumbnail">
+                                    </figure>
+                                </r-cell>
+
+                                <r-cell class="gallery-thumb project-1 " onclick="cellClick(this, 'project-1')">
+                                  
+                                    <div class="_header" style="display:none;">
+                                      <video width="100%" poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" preload="metadata" controls autoplay>
+                                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                                      </video>
+                                    </div>
+                                  
+                                    <figure style="margin:0; height:100%; position: relative;">
+                                      <video width="100%" muted loop autoplay preload="metadata">
+                                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4"></video>
+                                      <div class="video-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); color: white; font-size: 0.8rem;">▶</div>
+                                    </figure>
+                                </r-cell>
+
+                                <r-cell class="gallery-thumb project-1 " onclick="cellClick(this, 'project-1')">
+                                  
+                                    <div class="_header" style="display:none;">
+                                      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Project Title 1">
+                                    </div>
+                                  
+                                    <figure style="margin:0; height:100%; position: relative;">
+                                      <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop" width="100%" alt="Thumbnail">
+                                    </figure>
+                                </r-cell>
+                            </r-grid>
+                          </div>
+                          
+                          <div class="project-description" style="font-size: 0.95rem; line-height: 1.6; color: rgb(160, 160, 160);">
+                            
+
+<p>This artwork is a dynamic light installation. It represents a physical mapping of electronic signals in a dark gallery context.</p>
+
+<p>The light output is modulated in real-time according to ambient sonic changes in the room. The viewer's presence triggers variations in density, speed, and contrast.</p>
+
+<h3>Concept and Materials</h3>
+<p>By projecting light onto suspended optical prisms, the colors separate and bend across the walls, creating an immersive, architectural scale.</p>
+<ul>
+  <li>Custom modular micro-controller.</li>
+  <li>Suspended custom-cut glass prisms.</li>
+  <li>Pure data sonic mapping engine.</li>
+</ul>
+
+                          </div>
+                        </article>
+  </main>
+</div>
+
+<!-- Gallery script for independent multi-project galleries -->
+<script>
+function cellClick(cell, projectSlug) {
+  const hero = document.getElementById(projectSlug + '-header');
+  hero.innerHTML = cell.querySelector('._header').innerHTML;
+  
+  document.querySelectorAll('.' + projectSlug).forEach(el => el.classList.remove('active'));
+  cell.classList.add('active');
+  
+  const video = hero.querySelector('video');
+  if (video) {
+    video.play().catch(e => console.log('Autoplay deferred:', e));
+  }
+}
+</script>
+
+  </div>
+</body>
+</html>

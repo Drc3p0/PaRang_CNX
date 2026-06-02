@@ -1,0 +1,98 @@
+---
+layout: default
+---
+<div class="curated-portfolio-page">
+
+  <main>
+    <h1 style="font-size: 1.8rem; margin-bottom: 10px; color: #ffffff;">{{ page.title }}</h1>
+    {% if page.curation_notes %}
+      <p class="quote" style="margin-bottom: 3rem; color: #999999; border-left: 2px solid #333; padding-left: 15px;">
+        {{ page.curation_notes }}
+      </p>
+    {% endif %}
+    
+    <hr>
+    
+    <!-- Render selected projects -->
+    {% for selected_slug in page.selected_projects %}
+      {% assign project = site.projects | where: "slug", selected_slug | first %}
+      {% if project %}
+        <article class="curated-item" style="margin-bottom: 6rem;">
+          
+          <!-- Sticky project banner inside this timeline -->
+          <div style="background-color: #0b0b0b; border-bottom: 0.5px solid #222; padding: 10px 0; display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5rem;">
+            <h2 style="font-size: 1.25rem; display: inline; color: #ffffff; margin:0;">{{ project.title }}</h2>
+            <span class="mono" style="font-size: 0.8rem; color: #666666;">{{ project.year }} &middot; {{ project.location }}</span>
+          </div>
+
+          <!-- Hero gallery for this item -->
+          <div class="gallery" style="margin-bottom: 1.5rem;">
+            <r-cell id="{{ project.slug }}-header" class="header" style="height: 50vh; min-height: 50vh;">
+              {% assign first = project.gallery.first %}
+              {% if first.type == "video" %}
+                <video width="100%" poster="{{ first.poster }}" preload="metadata" controls>
+                  <source src="{{ first.url }}" type="video/mp4">
+                </video>
+              {% else %}
+                <img src="{{ first.url }}" width="100%" alt="{{ project.title }}">
+              {% endif %}
+            </r-cell>
+            
+            <br>
+            
+            <r-grid columns="6" columns-s="3" style="--columnGap: 8px; --rowGap: 8px;">
+              {% for item in project.gallery %}
+                <r-cell class="gallery-thumb {{ project.slug }} {% if forloop.first %}active{% endif %}" onclick="cellClick(this, '{{ project.slug }}')">
+                  <!-- Hidden rich media container used to transfer markup to the hero frame -->
+                  <div class="_header" style="display:none;">
+                    {% if item.type == "video" %}
+                      <video width="100%" poster="{{ item.poster }}" preload="metadata" controls autoplay>
+                        <source src="{{ item.url }}" type="video/mp4">
+                      </video>
+                    {% else %}
+                      <img src="{{ item.url }}" width="100%" alt="{{ project.title }}">
+                    {% endif %}
+                  </div>
+                  
+                  <!-- Small thumbnail preview -->
+                  <figure style="margin:0; height:100%; position: relative;">
+                    {% if item.type == "video" %}
+                      <video width="100%" muted loop autoplay preload="metadata">
+                        <source src="{{ item.url }}" type="video/mp4">
+                      </video>
+                      <div class="video-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); color: white; font-size: 0.8rem;">▶</div>
+                    {% else %}
+                      <img src="{{ item.url }}" width="100%" alt="Thumbnail">
+                    {% endif %}
+                  </figure>
+                </r-cell>
+              {% endfor %}
+            </r-grid>
+          </div>
+
+          <!-- Project Description Text -->
+          <div class="project-description" style="font-size: 0.95rem; line-height: 1.6; color: rgb(160, 160, 160);">
+            {{ project.content }}
+          </div>
+          
+        </article>
+      {% endif %}
+    {% endfor %}
+  </main>
+</div>
+
+<!-- Gallery script for independent multi-project galleries -->
+<script>
+function cellClick(cell, projectSlug) {
+  const hero = document.getElementById(projectSlug + '-header');
+  hero.innerHTML = cell.querySelector('._header').innerHTML;
+  
+  document.querySelectorAll('.' + projectSlug).forEach(el => el.classList.remove('active'));
+  cell.classList.add('active');
+  
+  const video = hero.querySelector('video');
+  if (video) {
+    video.play().catch(e => console.log('Autoplay deferred:', e));
+  }
+}
+</script>

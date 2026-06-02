@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %} - {% endif %}Artist Name</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="Artist Name">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Typography & Layout Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/raster2.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  <style>
+    /* Integrate Google Fonts dynamically into our main layout */
+    body {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+    }
+    code, pre, .mono, nav a, footer {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper" style="padding-top: 30px;">
+    <!-- Responsive 9-Column Navigation Grid -->
+    <nav style="margin-bottom: 4rem; border-bottom: 0.5px solid #222; padding-bottom: 20px; max-width: 42rem; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;">
+      <r-grid columns="9" columns-s="3" style="--columnGap: 10px; --rowGap: 15px; text-align: center;">
+        <r-cell><a href="/" class="mono" style="font-size: 0.8rem; border:none;">PROJECTS</a></r-cell>
+        <r-cell><a href="/workshops.html" class="mono" style="font-size: 0.8rem; border:none;">WORKSHOPS</a></r-cell>
+        <r-cell><a href="/music.html" class="mono" style="font-size: 0.8rem; border:none;">MUSIC</a></r-cell>
+        <r-cell><a href="/about.html" class="mono" style="font-size: 0.8rem; border:none;">BIO</a></r-cell>
+        <r-cell><a href="/resume.html" class="mono" style="font-size: 0.8rem; border:none;">RESUME</a></r-cell>
+        <r-cell><a href="/exhibitions.html" class="mono" style="font-size: 0.8rem; border:none;">EXHIBITIONS</a></r-cell>
+        <r-cell><a href="/residencies.html" class="mono" style="font-size: 0.8rem; border:none;">RESIDENCIES</a></r-cell>
+        <r-cell><a href="/events.html" class="mono" style="font-size: 0.8rem; border:none;">EVENTS</a></r-cell>
+        <r-cell><a href="/writings.html" class="mono" style="font-size: 0.8rem; border:none;">WRITINGS</a></r-cell>
+      </r-grid>
+    </nav>
+
+    <h1>Crashcourse: DIY Antennas & The Unseen World</h1>
+<p><em>A Workshop Zine for Explorers of Signals and Sounds</em></p>
+
+<p>--- PAGE BREAK ---</p>
+
+<h2>The Unseen Sea Around Us</h2>
+
+<p>We are surrounded by an invisible ocean of information. Radio stations, weather satellites, Wi-Fi networks, and even Jupiter's storms are constantly broadcasting energy around us.</p>
+
+<p>An antenna is simply a piece of metal (or wire) that acts as a bridge between that invisible world and our electronic tools. It converts electrical signals into radio waves and back again. When radio waves from a broadcast tower <em>reach</em> your antenna, they induce a tiny electrical current in the wire.[^1] Your radio amplifies that current and turns it into sound or data.</p>
+
+<p>Think of it like a tuning fork. A tuning fork only vibrates strongly at one specific pitch. Antennas work the same way: they resonate most powerfully at a specific frequency, determined by their physical length.</p>
+
+<h2>Safety First!</h2>
+
+<p>These rules are non-negotiable for builders:</p>
+
+<ol>
+  <li><strong>Never run antenna wire near or across power lines.</strong></li>
+  <li><strong>Never connect a long wire antenna to a power outlet or any mains-connected device.</strong> The antenna wire can carry lethal induced voltages from lightning or accidental contact with power lines.</li>
+  <li><strong>Grounding:</strong> Do not use the electrical ground from a power outlet as your radio ground. Use a dedicated copper ground rod driven into damp soil.[^2]</li>
+  <li><strong>Soldering:</strong> Always work in a well-ventilated area, wear safety glasses, and use lead-free solder when possible.</li>
+</ol>
+
+<p>--- PAGE BREAK ---</p>
+
+<h2>The Magic of Resonance</h2>
+
+<p>You can think of radio waves as ripples on a pond. The distance between two ripple crests is the <strong>wavelength</strong>. The number of ripples passing a fixed point per second is the <strong>frequency</strong>. The shorter the wavelength, the higher the frequency.[^3]</p>
+
+<h3>Why Size Matters</h3>
+<p>An antenna works best when its length matches a resonant fraction of the wavelength—usually half or a quarter of the wave.</p>
+
+<ul>
+  <li><strong>AM Radio (530-1,700 kHz):</strong> Wavelengths are huge (176 to 566 meters). A quarter-wave antenna would be up to 141 meters long!</li>
+  <li><strong>FM Radio (88-108 MHz):</strong> Wavelengths are manageable (2.78 to 3.41 meters).</li>
+  <li><strong>Wi-Fi (2.4 GHz):</strong> Wavelengths are tiny (12.5 cm).</li>
+</ul>
+
+<h3>The Master Formula</h3>
+<p>All antenna size calculations begin with one formula:</p>
+<p><code>Wavelength (meters) = 300 / Frequency (MHz)</code></p>
+
+<p>For a <strong>Half-Wave Dipole</strong>, the total length in meters is:</p>
+<p><code>142.65 / Frequency (MHz)</code></p>
+
+<p>For a <strong>Quarter-Wave Monopole</strong>, the length in meters is:</p>
+<p><code>75 / Frequency (MHz)</code></p>
+
+<p><em>(Always cut your wire slightly long, then trim it down for the best reception!)</em></p>
+
+<p>--- PAGE BREAK ---</p>
+
+<h2>Workshop Part 1: The Scavenger Hunt</h2>
+
+<p>Before we build, we need materials. You don't need to buy expensive parts to start exploring the radio spectrum!</p>
+
+<h3>Finding Wire</h3>
+<p>You need wire for coils and antennas. Before buying any:</p>
+<ul>
+  <li><strong>Dead electric motors</strong> (fans, appliances): Unwind the coils for enameled wire.</li>
+  <li><strong>Ethernet cable (Cat5/Cat6):</strong> Four twisted pairs of solid AWG 24 copper wire. A patch cable gives you 3–15 feet of wire; bulk spools give 50+ feet. Either is useful for coil-winding.</li>
+  <li><strong>Old extension cords or lamp cord:</strong> Stranded copper, perfect for stringing up long antennas.</li>
+</ul>
+
+<h3>Listening to the Spectrum</h3>
+<p>If you have an <strong>RTL-SDR</strong> (a $20 USB dongle), you can plug it into any laptop and instantly see the radio spectrum from 24 MHz to 1.7 GHz.[^4]</p>
+<ul>
+  <li>To start exploring, all you need is a simple quarter-wave wire plugged into the SDR.</li>
+  <li><strong>For FM Radio:</strong> Use a 76 cm wire (about 30 inches).</li>
+  <li><strong>For Wi-Fi:</strong> Use a 3.1 cm wire.</li>
+</ul>
+
+<p>--- PAGE BREAK ---</p>
+
+<h2>Workshop Part 2: Catching FM (The Dipole)</h2>
+
+<p>The <strong>T-Dipole</strong> is the standard indoor FM antenna. It performs much better than a wire draped randomly over furniture.</p>
+
+<p><strong>Materials:</strong></p>
+<ul>
+  <li>1.6 meters (~5.5 feet) of two-conductor wire (speaker wire or lamp cord)</li>
+  <li>Wire strippers & Tape</li>
+</ul>
+
+<p><strong>The Math (For 98 MHz FM Center):</strong></p>
+<p>Using our formula: <code>142.65 / 98 = 1.456 meters total</code>.</p>
+<p>The practical range for the FM band is <strong>132 to 162 cm</strong> total length.[^5] A 150 cm total length (75 cm per arm) is a great starting point.</p>
+
+<p><strong>How to Build:</strong></p>
+<ol>
+  <li>Cut your wire to 160 cm. At the exact midpoint (80 cm), separate the two conductors for about 3 cm. Do NOT cut them, just peel them apart.</li>
+  <li>Strip both conductors at the midpoint, exposing 1 cm of bare wire on each side. These are your feed points.</li>
+  <li>From the midpoint, extend each conductor outward (one left, one right) for 75 cm. At the ends, strip 1 cm and fold the bare wire back on itself.</li>
+  <li>The remaining wire going down is your "feedline" to your radio. Connect the stripped midpoint wires to your radio's FM antenna terminals.</li>
+  <li><em>(Note: If your radio has a 75 Ohm coaxial input, you'll need a 300-to-75 Ohm matching transformer (a 'balun'). Plug the twin-lead wires into the balun's 300 Ohm terminals, then run a coax cable from its 75 Ohm port to the radio).</em>[^6]</li>
+  <li>Mount the T-shape horizontally on a wall. Horizontal mounting matches the polarization of most FM stations. In the worst case, a polarization mismatch can cost you 20 dB of signal—meaning your radio receives 100 times less power than it could. While many FM stations now broadcast a mixed signal so the loss is smaller, it's still worth matching polarization when you can.</li>
+</ol>
+
+<p>--- PAGE BREAK ---</p>
+
+<h2>Workshop Part 3: AM & The Foxhole Radio</h2>
+
+<p>AM radio waves are enormous, so we use coils (inductors) to catch them magnetically. The <strong>Foxhole Radio</strong> is the ultimate low-cost AM receiver, built from trash by WWII soldiers. It requires NO batteries!</p>
+
+<p><strong>Materials:</strong></p>
+<ul>
+  <li>1 cardboard tube (toilet paper roll)</li>
+  <li>~15 meters of thin wire (salvaged)</li>
+  <li>1 razor blade (blue or rusty works best)</li>
+  <li>1 pencil stub (wood, not mechanical)</li>
+  <li>1 safety pin & 2 thumbtacks</li>
+  <li>1 high-impedance earphone (piezo buzzer salvaged from a greeting card)</li>
+</ul>
+
+<p><strong>How to Build:</strong></p>
+<ol>
+  <li>Wind 100-120 turns of wire tightly around the cardboard tube.</li>
+  <li>Tack the razor blade flat onto a wood base using a thumbtack.</li>
+  <li>Break the pencil to expose ~1 cm of graphite. Tape the pencil to the safety pin.</li>
+  <li>Mount the safety pin on a second thumbtack so the graphite tip rests lightly on the razor blade.</li>
+  <li><strong>Connections:</strong></li>
+</ol>
+<ul>
+  <li>Antenna wire (long wire out a window) to one end of the coil.</li>
+  <li>Other end of coil to the razor blade (via thumbtack).</li>
+  <li>Safety pin (pencil side) to one earphone wire.</li>
+  <li>Other earphone wire to ground (metal pipe or earth stake).</li>
+</ul>
+
+<p><strong>Why it works:</strong></p>
+<p>The thin oxide layer on the razor blade surface acts as a semiconductor junction. The graphite pencil lead makes point contact with this layer, creating a crude diode that demodulates AM signals, turning radio waves directly into audio you can hear!</p>
+
+<p><em>(If you want to upgrade, use a 1N34A Germanium Diode and a Variable Capacitor to make a true Crystal Radio).</em>[^7]</p>
+
+<p>--- PAGE BREAK ---</p>
+
+<h2>Workshop Part 4: Exploring the Unknown</h2>
+
+<p>For Wi-Fi and microwaves, wavelengths are tiny. You can build highly directional antennas from everyday objects.</p>
+
+<h3>The Cantenna (Wi-Fi Booster)</h3>
+<p>A cylindrical metal can acts as a <em>waveguide</em>—a funnel that forces 2.4 GHz signals to travel in one direction while blocking them from spreading sideways. The closed back reflects them out the open front.</p>
+
+<p><strong>Materials:</strong></p>
+<ul>
+  <li>1 solid metal can (diameter ~92 mm / 3.6 inches)</li>
+  <li>N-type or RP-SMA connector & short copper wire</li>
+</ul>
+
+<p><strong>How to Build:</strong></p>
+<ol>
+  <li>Drill a hole <strong>59.8 mm</strong> from the closed bottom of the can. <em>(This position is empirically optimized for a 92 mm can at 2.4 GHz. The exact optimal depth shifts slightly depending on can diameter).</em>[^8]</li>
+  <li>Cut a copper probe wire to exactly <strong>30.9 mm</strong>. Solder it to your connector.</li>
+  <li>Insert the connector into the hole so the probe sits inside the can. Connect to your Wi-Fi device.</li>
+</ol>
+
+<h3>The Yagi-Uda</h3>
+<p>The classic rooftop antenna. It uses multiple elements to "steer" the beam forward.</p>
+<p>For 2.4 GHz Wi-Fi, you can build a 5-element Yagi out of straightened paper clips and a popsicle stick![^9]</p>
+<ul>
+  <li>Driven element: 5.91 cm</li>
+  <li>Reflector: 6.19 cm (placed 1.56 cm behind driven)</li>
+  <li>Directors: 5.50 cm, 5.22 cm, 5.00 cm (spaced in front)</li>
+</ul>
+
+<p>--- PAGE BREAK ---</p>
+
+<h2>Making Your Own Components</h2>
+
+<h3>Homemade Variable Capacitor</h3>
+<p>A variable capacitor is used to tune your radio to specific stations.</p>
+
+<p><strong>Materials:</strong></p>
+<p>Cardboard, aluminum foil, plastic page protectors, and a machine screw.</p>
+
+<p><strong>How to Build:</strong></p>
+<ol>
+  <li><strong>Stator (fixed plate):</strong> Glue foil onto cardboard (15 cm circle). Cover with a plastic protector. Attach a wire.</li>
+  <li><strong>Rotor (moving plate):</strong> Glue foil to a cardboard half-circle (14 cm). Cover with plastic. Attach a wire.</li>
+  <li>Stack the rotor on top of the stator with the screw as a pivot.</li>
+  <li>The capacitance depends on plate overlap area and dielectric thickness. Larger plates = more capacitance. Thicker dielectric = less capacitance. With thin plastic sheet (page protector), expect roughly 2–4 pF per cm² of overlap area. A 15 cm half-circle (88 cm²) would produce approximately <strong>175–350 pF</strong>. The exact range will vary — tune empirically![^10]</li>
+</ol>
+
+<h3>Experimental Listening & Aesthetics</h3>
+<p>Antennas aren't just for perfect reception—they are aesthetic and experimental tools. Try building large, sculptural loop antennas, or using inductive coupling (holding a coil near a device) to listen to the "hidden songs" of your electronics. EMF listening reveals the rhythmic pulses of our modern world.</p>
+
+<p>--- PAGE BREAK ---</p>
+
+<h2>References & Resources</h2>
+
+<ol>
+  <li><strong>How Antennas Work:</strong> When radio waves reach an antenna, they induce a current. <a href="https://www.omnicalculator.com/physics/dipole">OmniCalculator Dipole</a></li>
+  <li><strong>Safety Guidelines:</strong> <a href="https://www.open.edu/openlearn/science-maths-technology/science/physics-and-astronomy/physics/building-crystal-radio-set">OpenLearn Crystal Radio Safety</a></li>
+  <li><strong>Wavelengths & Frequencies:</strong> <a href="https://wavelength-calculator.com/antenna-quarter-wave-calculator.php">Antenna Quarter Wave Calculator</a></li>
+  <li><strong>SDR Resources:</strong> <a href="https://lukeattubato.com/making-my-own-antennas">Luke Attubato Making My Own Antennas</a></li>
+  <li><strong>FM Dipole Construction:</strong> <a href="https://www.electronics-notes.com/articles/antennas-propagation/dipole-antenna/fm-dipole-antenna.php">Electronics Notes FM Dipole</a></li>
+  <li><strong>Baluns and Transformers:</strong> <a href="https://www.radio4all.org/how-to-make-a-75-ohm-fm-antenna/">Radio4All 75 Ohm FM Antenna</a></li>
+  <li><strong>Crystal Radios & AM Loops:</strong> <a href="https://www.4mcveys.net/2018/10/05/a-very-efficient-loop-antenna-for-am-broadcasts/">4mcveys.net AM Loop</a>, <a href="https://www.techlib.com/electronics/crystal.html">Techlib Crystal Radio Circuits</a></li>
+  <li><strong>Cantenna Waveguides:</strong> <a href="http://www.wikarekare.org/Antenna/WaveguideCan.html">wikarekare.org Waveguide Can Calculator</a></li>
+  <li><strong>Yagi Design:</strong> <a href="https://www.rfwireless-world.com/calculators/3-element-yagi-antenna-calculator">RF Wireless World Yagi Calculator</a></li>
+  <li><strong>Homemade Capacitors:</strong> Based on practical air/plastic-gap models.</li>
+</ol>
+
+<p><em>This zine is open-source. Share, copy, and explore the signals around you!</em></p>
+
+  </div>
+</body>
+</html>
