@@ -1,0 +1,29 @@
+# robots.txt for Pa Rang Cafe & Art Stay
+# Optimized for search engines and generative AI search agents (GEO / AI SEO)
+
+User-agent: *
+Allow: /
+
+# Specifically welcome AI Web Search Crawlers to read our structured data
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Exclude system files
+Disallow: /__pycache__/
+Disallow: /backup_old_portfolio/
+Disallow: /_site/
