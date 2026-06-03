@@ -143,13 +143,18 @@
             <span class="lang-ko">찾아오시는 길</span>
           </a>
         </li>
-        <!-- Language Switcher Pill -->
-        <li class="lang-switcher">
-          <button onclick="setLanguage('en')" class="lang-btn active" id="btn-lang-en">EN</button>
-          <span class="lang-divider">|</span>
-          <button onclick="setLanguage('th')" class="lang-btn" id="btn-lang-th">TH</button>
-          <span class="lang-divider">|</span>
-          <button onclick="setLanguage('ko')" class="lang-btn" id="btn-lang-ko">KO</button>
+        <!-- Language Dropdown Menu -->
+        <li class="lang-dropdown-container">
+          <button class="lang-dropdown-trigger" id="lang-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-globe">🌐</span>
+            <span class="active-lang-label">English</span>
+            <span class="dropdown-chevron">▼</span>
+          </button>
+          <ul class="lang-dropdown-menu" id="lang-dropdown-menu">
+            <li><button type="button" onclick="setLanguage('en'); toggleLangDropdown();" class="lang-dropdown-item active" id="opt-lang-en">English</button></li>
+            <li><button type="button" onclick="setLanguage('th'); toggleLangDropdown();" class="lang-dropdown-item" id="opt-lang-th">ไทย (Thai)</button></li>
+            <li><button type="button" onclick="setLanguage('ko'); toggleLangDropdown();" class="lang-dropdown-item" id="opt-lang-ko">한국어 (Korean)</button></li>
+          </ul>
         </li>
       </ul>
       
@@ -1178,22 +1183,56 @@ Generated securely from Pa Rang static portal.
       document.getElementById('form-proposal').placeholder = data.proposal;
     }
 
+    // E. Language Switcher Dropdown Controller
+    const langDropdownContainer = document.querySelector('.lang-dropdown-container');
+    const langDropdownTrigger = document.getElementById('lang-dropdown-trigger');
+    const langLabels = {
+      en: 'English',
+      th: 'ไทย (Thai)',
+      ko: '한국어 (Korean)'
+    };
+
+    function toggleLangDropdown(event) {
+      if (event) {
+        event.stopPropagation();
+      }
+      const isActive = langDropdownContainer.classList.toggle('active');
+      langDropdownTrigger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    }
+
+    langDropdownTrigger.addEventListener('click', toggleLangDropdown);
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!langDropdownContainer.contains(e.target)) {
+        langDropdownContainer.classList.remove('active');
+        langDropdownTrigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
     function setLanguage(lang) {
       // 1. Set active class on body
       document.body.className = `lang-${lang}`;
       
-      // 2. Set active status on language buttons
-      document.querySelectorAll('.lang-btn').forEach(btn => {
+      // 2. Set active status on dropdown items
+      document.querySelectorAll('.lang-dropdown-item').forEach(btn => {
         btn.classList.remove('active');
       });
-      document.querySelectorAll(`#btn-lang-${lang}`).forEach(btn => {
-        btn.classList.add('active');
-      });
+      const activeOpt = document.getElementById(`opt-lang-${lang}`);
+      if (activeOpt) {
+        activeOpt.classList.add('active');
+      }
       
-      // 3. Update dynamic input placeholders
+      // 3. Update trigger button text label
+      const activeLabelEl = document.querySelector('.active-lang-label');
+      if (activeLabelEl) {
+        activeLabelEl.textContent = langLabels[lang] || 'English';
+      }
+      
+      // 4. Update dynamic input placeholders
       updateFormPlaceholders(lang);
       
-      // 4. Store selection in local storage
+      // 5. Store selection in local storage
       localStorage.setItem('preferred-lang', lang);
     }
 
