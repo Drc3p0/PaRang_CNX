@@ -4,26 +4,65 @@
 User-agent: *
 Allow: /
 
-# Specifically welcome AI Web Search Crawlers to read our structured data
+# OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
-
 User-agent: ChatGPT-User
 Allow: /
 
+# Google Gemini / Bard
 User-agent: Google-Extended
 Allow: /
 
-User-agent: PerplexityBot
-Allow: /
-
+# Anthropic Claude
 User-agent: Anthropic-ai
 Allow: /
-
 User-agent: Claude-Web
 Allow: /
 
-# Exclude system files
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# DeepSeek
+User-agent: DeepSeekBot
+Allow: /
+
+# Alibaba Qwen
+User-agent: QwenBot
+Allow: /
+
+# Meta AI / Llama
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# ByteDance / Doubao
+User-agent: Bytespider
+Allow: /
+
+# You.com AI Search
+User-agent: YouBot
+Allow: /
+
+# Brave AI Search
+User-agent: Bravebot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# RAG & Web Archiving datasets used to train AI models
+User-agent: CCBot
+Allow: /
+User-agent: Diffbot
+Allow: /
+
+# Exclude local development caches
 Disallow: /__pycache__/
-Disallow: /backup_old_portfolio/
-Disallow: /_site/
