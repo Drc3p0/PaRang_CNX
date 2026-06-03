@@ -89,7 +89,7 @@
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body id="home">
+<body id="home" class="lang-en">
 
   <!-- 1. STICKY NAVIGATION HEADER -->
   <header class="sticky-nav">
@@ -101,12 +101,56 @@
       
       <!-- Desktop Navigation Menu -->
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#about" class="nav-link">The Space</a></li>
-        <li><a href="#events" class="nav-link">Events & Workshops</a></li>
-        <li><a href="#cafe" class="nav-link">Cafe</a></li>
-        <li><a href="#stay" class="nav-link">Art Stay</a></li>
-        <li><a href="#apply" class="nav-link">Residency & Apply</a></li>
-        <li><a href="#contact" class="nav-link">Find Us</a></li>
+        <li>
+          <a href="#about" class="nav-link">
+            <span class="lang-en">The Space</span>
+            <span class="lang-th">เดอะสเปซ</span>
+            <span class="lang-ko">공간 소개</span>
+          </a>
+        </li>
+        <li>
+          <a href="#events" class="nav-link">
+            <span class="lang-en">Events & Workshops</span>
+            <span class="lang-th">กิจกรรม & เวิร์กช็อป</span>
+            <span class="lang-ko">이벤트 & 워크숍</span>
+          </a>
+        </li>
+        <li>
+          <a href="#cafe" class="nav-link">
+            <span class="lang-en">Cafe</span>
+            <span class="lang-th">คาเฟ่</span>
+            <span class="lang-ko">카페</span>
+          </a>
+        </li>
+        <li>
+          <a href="#stay" class="nav-link">
+            <span class="lang-en">Art Stay</span>
+            <span class="lang-th">ห้องพัก</span>
+            <span class="lang-ko">아트 스테이</span>
+          </a>
+        </li>
+        <li>
+          <a href="#apply" class="nav-link">
+            <span class="lang-en">Residency & Apply</span>
+            <span class="lang-th">ศิลปินพำนัก & สมัคร</span>
+            <span class="lang-ko">레지던시 & 지원</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link">
+            <span class="lang-en">Find Us</span>
+            <span class="lang-th">ที่ตั้ง</span>
+            <span class="lang-ko">찾아오시는 길</span>
+          </a>
+        </li>
+        <!-- Language Switcher Pill -->
+        <li class="lang-switcher">
+          <button onclick="setLanguage('en')" class="lang-btn active" id="btn-lang-en">EN</button>
+          <span class="lang-divider">|</span>
+          <button onclick="setLanguage('th')" class="lang-btn" id="btn-lang-th">TH</button>
+          <span class="lang-divider">|</span>
+          <button onclick="setLanguage('ko')" class="lang-btn" id="btn-lang-ko">KO</button>
+        </li>
       </ul>
       
       <!-- Mobile Menu Toggle Button -->
@@ -123,17 +167,40 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <span class="hero-tag">Chiang Mai Old Town</span>
-      <h1 class="hero-title">A Gathering Place for <span class="highlight-clay">Art</span>, <span class="highlight-gold">Music</span> & Good Conversations</h1>
-      <p class="hero-description">An inspiring courtyard garden, refreshing cafe, art stay, and artist residency nestled in a quiet lane by Wat Phra Singh.</p>
+      
+      <h1 class="hero-title">
+        <span class="lang-en">A Gathering Place for <span class="highlight-clay">Art</span>, <span class="highlight-gold">Music</span> & Good Conversations</span>
+        <span class="lang-th">แหล่งพบปะสังสรรค์สำหรับ <span class="highlight-clay">ศิลปะ</span> <span class="highlight-gold">ดนตรี</span> และบทสนทนาดีๆ</span>
+        <span class="lang-ko">예술과 <span class="highlight-clay">음악</span>, 그리고 <span class="highlight-gold">따뜻한 대화</span>가 머무는 공간</span>
+      </h1>
+      
+      <p class="hero-description">
+        <span class="lang-en">An inspiring courtyard garden, refreshing cafe, art stay, and artist residency nestled in a quiet lane by Wat Phra Singh.</span>
+        <span class="lang-th">สวนร่มรื่น คาเฟ่แสนรีเฟรช ห้องพักสุดชิค และโปรแกรมศิลปินพำนัก ซ่อนตัวอยู่ในซอยเงียบสงบข้างวัดพระสิงห์</span>
+        <span class="lang-ko">왓프라싱(Wat Phra Singh) 옆 조용한 골목에 위치한, 영감을 주는 정원 카페이자 아트 스테이 및 예술가 레지던시.</span>
+      </p>
+      
       <div class="hero-ctas">
-        <a href="#events" class="btn btn-primary">Events & Workshops</a>
-        <a href="#stay" class="btn btn-secondary">Book a Stay</a>
+        <a href="#events" class="btn btn-primary">
+          <span class="lang-en">Events & Workshops</span>
+          <span class="lang-th">กิจกรรม & เวิร์กช็อป</span>
+          <span class="lang-ko">이벤트 & 워크숍</span>
+        </a>
+        <a href="#stay" class="btn btn-secondary">
+          <span class="lang-en">Book a Stay</span>
+          <span class="lang-th">จองห้องพัก</span>
+          <span class="lang-ko">객실 예약하기</span>
+        </a>
       </div>
     </div>
     
     <!-- Scroll Down indicator -->
     <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
-      <span>Explore</span>
+      <span>
+        <span class="lang-en">Explore</span>
+        <span class="lang-th">สำรวจ</span>
+        <span class="lang-ko">둘러보기</span>
+      </span>
       <div class="mouse">
         <div class="wheel"></div>
       </div>
@@ -148,17 +215,44 @@
         <!-- Restored High-Aesthetic Real Teakwood Courtyard Image -->
         <div class="space-editorial-img">
           <img src="assets/images/real_hero_garden.png" alt="Pa Rang Heritage House and Courtyard Garden" loading="lazy">
-          <div class="space-badge">Old Town Sanctuary</div>
+          <div class="space-badge">
+            <span class="lang-en">Old Town Sanctuary</span>
+            <span class="lang-th">โอเอซิสเมืองเก่า</span>
+            <span class="lang-ko">올드타운 안식처</span>
+          </div>
         </div>
         
         <div>
-          <span class="section-title-tag">The Space</span>
-          <h2 class="section-title">A place to think new ideas & <span class="highlight-clay">experiment</span>.</h2>
-          <p>Founded and curated with an artistic spirit, <strong>Pa Rang Cafe & Art Stay</strong> is a peaceful compound located in the heart of historic Chiang Mai. We designed this space to serve as a supportive and comfortable greenhouse for minds to slow down, explore, and create.</p>
-          <p>Surrounded by foliage, the space transitions seamlessly from an energetic cafe courtyard in the day to a magical, lantern-lit acoustic garden during music nights. It is a nurturing home for travelers, locals, and creative people.</p>
+          <span class="section-title-tag">
+            <span class="lang-en">The Space</span>
+            <span class="lang-th">เดอะสเปซ</span>
+            <span class="lang-ko">공간 소개</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-en">A place to think new ideas & <span class="highlight-clay">experiment</span>.</span>
+            <span class="lang-th">พื้นที่สำหรับค้นหาไอเดียใหม่ๆ และการ<span class="highlight-clay">ทดลอง</span></span>
+            <span class="lang-ko">새로운 아이디어를 구상하고 <span class="highlight-clay">실험</span>하는 공간</span>
+          </h2>
+          
+          <div class="lang-en">
+            <p>Founded and curated with an artistic spirit, <strong>Pa Rang Cafe & Art Stay</strong> is a peaceful compound located in the heart of historic Chiang Mai. We designed this space to serve as a supportive and comfortable greenhouse for minds to slow down, explore, and create.</p>
+            <p>Surrounded by foliage, the space transitions seamlessly from an energetic cafe courtyard in the day to a magical, lantern-lit acoustic garden during music nights. It is a nurturing home for travelers, locals, and creative people.</p>
+          </div>
+          <div class="lang-th">
+            <p>ด้วยแรงบันดาลใจจากจิตวิญญาณแห่งศิลปะ <strong>ป่าราง คาเฟ่ แอนด์ อาร์ตสเตย์</strong> คือบ้านไม้เก่าแก่ใจกลางเมืองประวัติศาสตร์เชียงใหม่ เราออกแบบพื้นที่นี้ให้เป็นเหมือนเรือนกระจกที่อบอุ่นและสะดวกสบาย เพื่อให้ทุกคนได้ก้าวช้าลง ค้นหา และสร้างสรรค์</p>
+            <p>ท่ามกลางต้นไม้ร่มรื่น พื้นที่แห่งนี้เปลี่ยนผ่านอย่างราบรื่นจากลานคาเฟ่ที่สดใสในเวลากลางวัน สู่สวนดนตรีอะคูสติกใต้แสงโคมไฟแสนมหัศจรรย์ยามค่ำคืน เป็นบ้านที่พร้อมต้อนรับนักเดินทาง คนท้องถิ่น และคนทำงานสร้างสรรค์ทุกคน</p>
+          </div>
+          <div class="lang-ko">
+            <p>예술적 영감을 바탕으로 기획된 <strong>파랑 카페 & 아트 스테이</strong>는 역사 깊은 치앙마이 올드타운 중심부에 위치한 고요한 휴식처입니다. 우리는 이 공간이 창의적인 생각들이 잠시 쉬어가고, 탐색하며, 창조할 수 있는 편안한 온실이 되기를 바라는 마음으로 설계했습니다.</p>
+            <p>푸른 나무들로 둘러싸인 이 공간은 낮에는 활기찬 야외 카페 정원으로, 밤에는 따스한 랜턴 불빛 아래 감성적인 어쿠스틱 음악이 흐르는 마법 같은 정원으로 자연스럽게 변화합니다. 여행자, 지역 주민, 창작자 모두에게 아늑한 안식처가 되어 줍니다.</p>
+          </div>
           
           <div style="margin-top: 2.5rem;">
-            <a href="#events" class="btn btn-secondary">Upcoming Happenings &rarr;</a>
+            <a href="#events" class="btn btn-secondary">
+              <span class="lang-en">Upcoming Happenings &rarr;</span>
+              <span class="lang-th">กิจกรรมที่กำลังจะมาถึง &rarr;</span>
+              <span class="lang-ko">진행 예정인 이벤트 보기 &rarr;</span>
+            </a>
           </div>
         </div>
       </div>
@@ -167,18 +261,36 @@
       <div class="philosophy-grid">
         <div class="philosophy-card">
           <span class="philosophy-icon">🌿</span>
-          <h3>Nurturing Vibe</h3>
-          <p>A tranquil environment engineered for relaxation, comfort, and deep focus in the shade of tropical trees.</p>
+          
+          <h3 class="lang-en">Nurturing Vibe</h3>
+          <h3 class="lang-th">บรรยากาศแสนอบอุ่น</h3>
+          <h3 class="lang-ko">아늑하고 차분한 무드</h3>
+          
+          <p class="lang-en">A tranquil environment engineered for relaxation, comfort, and deep focus in the shade of tropical trees.</p>
+          <p class="lang-th">บรรยากาศเงียบสงบที่ออกแบบมาเพื่อการผ่อนคลาย ความสะดวกสบาย และการจดจ่อท่ามกลางร่มเงาไม้เขตร้อน</p>
+          <p class="lang-ko">열대 나무 그늘 아래에서 휴식, 편안함, 그리고 깊은 몰입을 즐길 수 있도록 조성된 평온한 환경.</p>
         </div>
         <div class="philosophy-card">
           <span class="philosophy-icon">🧪</span>
-          <h3>Experimentation</h3>
-          <p>We encourage resident artists to experiment with new ideas, share knowledge, and connect with local community. Our artist studio is open for all resident artists to use.</p>
+          
+          <h3 class="lang-en">Experimentation</h3>
+          <h3 class="lang-th">การทดลองสร้างสรรค์</h3>
+          <h3 class="lang-ko">자유로운 창작 실험</h3>
+          
+          <p class="lang-en">We encourage resident artists to experiment with new ideas, share knowledge, and connect with local community. Our artist studio is open for all resident artists to use.</p>
+          <p class="lang-th">เราสนับสนุนให้ศิลปินพำนักทดลองไอเดียใหม่ๆ แบ่งปันความรู้ และเชื่อมต่อกับชุมชนท้องถิ่น สตูดิโอศิลปะของเราเปิดให้ศิลปินทุกคนใช้งาน</p>
+          <p class="lang-ko">작가들이 새로운 아이디어를 실험하고, 지식을 나누며, 지역 사회와 소통하도록 장려합니다. 공용 아뜰리에 스튜디오는 모든 입주 작가에게 개방됩니다.</p>
         </div>
         <div class="philosophy-card">
           <span class="philosophy-icon">🤝</span>
-          <h3>Community Rooted</h3>
-          <p>We act as a bridge connecting visiting international artists with Chiang Mai's rich local art community.</p>
+          
+          <h3 class="lang-en">Community Rooted</h3>
+          <h3 class="lang-th">เชื่อมโยงชุมชน</h3>
+          <h3 class="lang-ko">커뮤니티 중심의 유대</h3>
+          
+          <p class="lang-en">We act as a bridge connecting visiting international artists with Chiang Mai's rich local art community.</p>
+          <p class="lang-th">เราทำหน้าที่เป็นสะพานเชื่อมระหว่างศิลปินนานาชาติที่มาเยือน กับชุมชนศิลปะท้องถิ่นที่เปี่ยมด้วยมรดกของเชียงใหม่</p>
+          <p class="lang-ko">치앙마이를 찾는 해외 아티스트들과 활기찬 현지 예술 커뮤니티를 잇는 든든한 다리 역할을 합니다.</p>
         </div>
       </div>
     </div>
@@ -188,23 +300,49 @@
   <section id="events" class="section" style="background-color: #0b0d0c; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
       <div class="section-header">
-        <span class="section-title-tag">Happenings</span>
-        <h2 class="section-title">Garden Events & <span class="highlight-clay">Weekly Workshops</span></h2>
-        <p><strong>Events are happening frequently</strong> in our garden courtyard! We run a highly active and welcoming community space. Check out our signature reoccurring events and dynamic workshops below.</p>
+        <span class="section-title-tag">
+          <span class="lang-en">Happenings</span>
+          <span class="lang-th">กิจกรรม</span>
+          <span class="lang-ko">이벤트</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Garden Events & <span class="highlight-clay">Weekly Workshops</span></span>
+          <span class="lang-th">กิจกรรมในสวน & <span class="highlight-clay">เวิร์กช็อปประจำสัปดาห์</span></span>
+          <span class="lang-ko">정원 이벤트 & <span class="highlight-clay">매주 열리는 워크숍</span></span>
+        </h2>
+        <p class="lang-en"><strong>Events are happening frequently</strong> in our garden courtyard! We run a highly active and welcoming community space. Check out our signature reoccurring events and dynamic workshops below.</p>
+        <p class="lang-th"><strong>กิจกรรมมากมายเกิดขึ้นบ่อยครั้ง</strong>ในลานสวนของเรา! เรารันพื้นที่ชุมชนที่ต้อนรับและคึกคักอย่างยิ่ง ชมกิจกรรมประจำที่เป็นเอกลักษณ์และเวิร์กช็อปต่างๆ ด้านล่างนี้</p>
+        <p class="lang-ko">파랑의 정원 안뜰에서는 다채로운 이벤트가 자주 열립니다! 활발하게 운영되는 따뜻한 커뮤니티 공간에서 진행되는 시그니처 정기 이벤트와 워크숍을 확인해보세요.</p>
       </div>
 
       <div class="past-events-grid">
         
         <!-- Reoccurring event 1: Terracotta clay workshops -->
         <div class="event-card" style="border: 2px solid var(--accent-clay); position: relative; background: rgba(214, 129, 90, 0.03); display: flex; flex-direction: column; justify-content: space-between;">
-          <div style="position: absolute; top: -12px; right: 20px; background-color: var(--accent-clay); color: #ffffff; font-family: var(--font-nav); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; padding: 2px 10px; font-weight: 500;">Reoccurring Event</div>
+          <div style="position: absolute; top: -12px; right: 20px; background-color: var(--accent-clay); color: #ffffff; font-family: var(--font-nav); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; padding: 2px 10px; font-weight: 500;">
+            <span class="lang-en">Reoccurring Event</span>
+            <span class="lang-th">กิจกรรมประจำสัปดาห์</span>
+            <span class="lang-ko">정기 워크숍</span>
+          </div>
           <div>
             <div class="event-meta">
-              <span>Clay & Hand-building</span>
-              <span>Weekly Sessions</span>
+              <span class="lang-en">Clay & Hand-building</span>
+              <span class="lang-en">Weekly Sessions</span>
+              
+              <span class="lang-th">งานดิน & ปั้นมือ</span>
+              <span class="lang-th">เซสชันประจำสัปดาห์</span>
+              
+              <span class="lang-ko">점토 & 수제 식기</span>
+              <span class="lang-ko">매주 개최</span>
             </div>
-            <h3>Earthy Terracotta Workshops</h3>
-            <p>Our most popular signature reoccurring workshop. Gather in our quiet garden patio to experiment with authentic local Chiang Mai clay. Learn traditional Lanna hand-building and pinching techniques to mold your own terracotta planters, incense holders, or rustic art pieces under the guidance of our local coordinators.</p>
+            
+            <h3 class="lang-en">Earthy Terracotta Workshops</h3>
+            <h3 class="lang-th">เวิร์กช็อปดินเผาเทอราคอตตา</h3>
+            <h3 class="lang-ko">테라코타 흙 빚기 워크숍</h3>
+            
+            <p class="lang-en">Our most popular signature reoccurring workshop. Gather in our quiet garden patio to experiment with authentic local Chiang Mai clay. Learn traditional Lanna hand-building and pinching techniques to mold your own terracotta planters, incense holders, or rustic art pieces under the guidance of our local coordinators.</p>
+            <p class="lang-th">เวิร์กช็อปยอดนิยมอันเป็นเอกลักษณ์ของเรา ร่วมตัวกันในลานสวนที่เงียบสงบเพื่อทดลองใช้ดินเชียงใหม่แท้ๆ เรียนรู้เทคนิคการปั้นมือและขึ้นรูปดินแบบล้านนาดั้งเดิม เพื่อสร้างกระถางต้นไม้ ที่ปักธูป หรือชิ้นงานศิลปะสไตล์ชนบท ภายใต้คำแนะนำของทีมงานท้องถิ่น</p>
+            <p class="lang-ko">파랑에서 가장 사랑받는 대표적인 정기 워크숍입니다. 평온한 정원 테라스에 모여 치앙마이의 천연 황토를 직접 만져봅니다. 현지 튜터의 안내에 따라 전통 란나(Lanna)식 흙 빚기 기술을 배우며 나만의 테라코타 화분, 인센스 홀더, 혹은 내추럴한 예술 오브제를 만들어 봅니다.</p>
           </div>
           <div style="margin-top: 1.5rem; overflow: hidden; border-radius: 2px; border: 1px solid var(--border-color); aspect-ratio: 16/10;">
             <img src="assets/images/real_terracotta.png" alt="Terracotta Clay Workshop in Action at Pa Rang" style="width: 100%; height: 100%; object-fit: cover;">
@@ -213,14 +351,30 @@
 
         <!-- Reoccurring event 2: Garden Music performances -->
         <div class="event-card" style="border: 2px solid var(--accent-gold); position: relative; background: rgba(226, 171, 101, 0.03); display: flex; flex-direction: column; justify-content: space-between;">
-          <div style="position: absolute; top: -12px; right: 20px; background-color: var(--accent-gold); color: #000000; font-family: var(--font-nav); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; padding: 2px 10px; font-weight: 500;">Happening Frequently</div>
+          <div style="position: absolute; top: -12px; right: 20px; background-color: var(--accent-gold); color: #000000; font-family: var(--font-nav); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; padding: 2px 10px; font-weight: 500;">
+            <span class="lang-en">Happening Frequently</span>
+            <span class="lang-th">เกิดขึ้นบ่อยครั้ง</span>
+            <span class="lang-ko">자주 진행됨</span>
+          </div>
           <div>
             <div class="event-meta">
-              <span>Acoustics & Sound</span>
-              <span>Live Garden Music</span>
+              <span class="lang-en">Acoustics & Sound</span>
+              <span class="lang-en">Live Garden Music</span>
+              
+              <span class="lang-th">อะคูสติก & ซาวด์</span>
+              <span class="lang-th">ดนตรีสดในสวน</span>
+              
+              <span class="lang-ko">어쿠스틱 & 라이브</span>
+              <span class="lang-ko">야외 정원 라이브</span>
             </div>
-            <h3>Garden Music Nights</h3>
-            <p>A major regular highlight of our community life. Under the glowing paper lanterns, local Chiang Mai singer-songwriters, acoustic instrumentalists, and visiting ambient music practitioners perform sets. A highly popular evening for locals and travelers to share good conversations.</p>
+            
+            <h3 class="lang-en">Garden Music Nights</h3>
+            <h3 class="lang-th">ดนตรีในสวนยามค่ำคืน</h3>
+            <h3 class="lang-ko">정원 음악 밤 (Garden Music)</h3>
+            
+            <p class="lang-en">A major regular highlight of our community life. Under the glowing paper lanterns, local Chiang Mai singer-songwriters, acoustic instrumentalists, and visiting ambient music practitioners perform sets. A highly popular evening for locals and travelers to share good conversations.</p>
+            <p class="lang-th">ไฮไลต์สำคัญในชีวิตชุมชนของเรา ภายใต้โคมไฟกระดาษที่ส่องสว่าง นักร้องนักแต่งเพลงท้องถิ่นเชียงใหม่ นักดนตรีอะคูสติก และศิลปินเพลงแอมเบียนต์ที่มาเยือนจะผลัดกันมาแสดงดนตรี เป็นค่ำคืนที่ได้รับความนิยมอย่างสูงสำหรับคนท้องถิ่นและนักเดินทางในการแบ่งปันบทสนทนาดีๆ ร่วมกัน</p>
+            <p class="lang-ko">우리 커뮤니티의 가장 큰 정기 하일라이트 행사입니다. 은은하게 빛나는 종이 랜턴 아래에서 치앙마이 현지 싱어송라이터, 어쿠스틱 연주자, 그리고 이곳을 방문한 앰비언트 뮤지션들이 라이브 공연을 펼칩니다. 현지인과 여행객이 한데 어우러져 깊은 대화를 나누는 인기 있는 저녁 시간입니다.</p>
           </div>
           <div style="margin-top: 1.5rem; overflow: hidden; border-radius: 2px; border: 1px solid var(--border-color); aspect-ratio: 16/10;">
             <img src="assets/images/garden music.jpg" alt="Acoustic Garden Music Night at Pa Rang" style="width: 100%; height: 100%; object-fit: cover;">
@@ -231,11 +385,23 @@
         <div class="event-card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div class="event-meta">
-              <span>Shared Plates</span>
-              <span>Frequent Suppers</span>
+              <span class="lang-en">Shared Plates</span>
+              <span class="lang-en">Frequent Suppers</span>
+              
+              <span class="lang-th">จานอาหารแบ่งปัน</span>
+              <span class="lang-th">มื้อค่ำพบปะสังสรรค์</span>
+              
+              <span class="lang-ko">소셜 플레이트</span>
+              <span class="lang-ko">자주 모임</span>
             </div>
-            <h3>Community Dinners & Suppers</h3>
-            <p>We gather frequently for casual communal meals designed to connect traveling travelers, homestay guests, resident artists, and Chiang Mai's local Thai creative collectives. Share local northern Thai food, fresh drinks, and new collaborative drafts in our comfortable garden nook.</p>
+            
+            <h3 class="lang-en">Community Dinners & Suppers</h3>
+            <h3 class="lang-th">ดินเนอร์ & มื้อค่ำชุมชน</h3>
+            <h3 class="lang-ko">커뮤니티 소셜 디너</h3>
+            
+            <p class="lang-en">We gather frequently for casual communal meals designed to connect traveling travelers, homestay guests, resident artists, and Chiang Mai's local Thai creative collectives. Share local northern Thai food, fresh drinks, and new collaborative drafts in our comfortable garden nook.</p>
+            <p class="lang-th">เราจัดมื้ออาหารร่วมกันบ่อยครั้งเพื่อเชื่อมโยงนักเดินทาง แขกผู้เข้าพัก ศิลปินพำนัก และกลุ่มครีเอทีฟไทยในเชียงใหม่ แบ่งปันอาหารเหนือรสเลิศ เครื่องดื่มเย็นๆ และแลกเปลี่ยนไอเดียใหม่ๆ ในมุมสวนแสนสบายของเรา</p>
+            <p class="lang-ko">여행자, 홈스테이 게스트, 레지던시 입주 작가, 그리고 치앙마이 현지의 크리에이티브 그룹들이 어우러지는 캐주얼한 저녁 식사 자리를 자주 갖습니다. 편안한 정원 구석에 모여 북부 태국 로컬 푸드와 시원한 음료를 나누며 다채로운 대화를 나눕니다.</p>
           </div>
           <div style="margin-top: 1.5rem; overflow: hidden; border-radius: 2px; border: 1px solid var(--border-color); aspect-ratio: 16/10;">
             <img src="assets/images/garden socializing.jpg" alt="Community Socializing in Pa Rang Garden" style="width: 100%; height: 100%; object-fit: cover;">
@@ -246,11 +412,23 @@
         <div class="event-card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div class="event-meta">
-              <span>Curatorial & Talk</span>
-              <span>Rolling Events</span>
+              <span class="lang-en">Curatorial & Talk</span>
+              <span class="lang-en">Rolling Events</span>
+              
+              <span class="lang-th">เสวนา & การบรรยาย</span>
+              <span class="lang-th">กิจกรรมหมุนเวียน</span>
+              
+              <span class="lang-ko">예술 강연 & 투어</span>
+              <span class="lang-ko">상시 개최</span>
             </div>
-            <h3>Artist Talks & Studio Tours</h3>
-            <p>Rolling educational sessions hosted by our global resident artists. Ranging from digital art talks and watercolor illustration to curatorial roundtables and portfolio review circles designed to guide young local artists.</p>
+            
+            <h3 class="lang-en">Artist Talks & Studio Tours</h3>
+            <h3 class="lang-th">เสวนาศิลปิน & เยี่ยมชมสตูดิโอ</h3>
+            <h3 class="lang-ko">아티스트 토크 & 오픈 스튜디오</h3>
+            
+            <p class="lang-en">Rolling educational sessions hosted by our global resident artists. Ranging from digital art talks and watercolor illustration to curatorial roundtables and portfolio review circles designed to guide young local artists.</p>
+            <p class="lang-th">กิจกรรมแบ่งปันความรู้ที่จัดขึ้นโดยศิลปินนานาชาติของเรา ครอบคลุมตั้งแต่การพูดคุยเรื่องศิลปะดิจิทัล ภาพประกอบสีน้ำ ไปจนถึงการโต๊ะกลมคิวเรเตอร์ และการวิจารณ์พอร์ตโฟลิโอเพื่อแนะนำศิลปินรุ่นใหม่ในท้องถิ่น</p>
+            <p class="lang-ko">세계 각국에서 모인 레지던시 작가들이 진행하는 릴레이 교육 세션입니다. 디지털 아트 세미나, 수채화 일러스트레이션 클래스부터 큐레이터 라운드 테이블, 현지 예비 작가들을 위한 포트폴리오 리뷰 피드백 등이 다양하게 진행됩니다.</p>
           </div>
           <div style="margin-top: 1.5rem; overflow: hidden; border-radius: 2px; border: 1px solid var(--border-color); aspect-ratio: 16/10;">
             <img src="assets/images/indigoworkshop.jpg" alt="Indigo Dyeing Workshop at Pa Rang" style="width: 100%; height: 100%; object-fit: cover;">
@@ -261,8 +439,15 @@
 
       <!-- Timeless social links -->
       <div class="social-cta-box" style="margin-top: 4rem;">
-        <h3>See What's Happening This Week</h3>
-        <p>We keep our community calendar highly active and flexible on our social accounts. Follow us to check out this week's music schedule, tropical drink specials, and terracotta workshop slots!</p>
+        
+        <h3 class="lang-en">See What's Happening This Week</h3>
+        <h3 class="lang-th">ดูกิจกรรมที่เกิดขึ้นในสัปดาห์นี้</h3>
+        <h3 class="lang-ko">이번 주에 열리는 이벤트 소식</h3>
+        
+        <p class="lang-en">We keep our community calendar highly active and flexible on our social accounts. Follow us to check out this week's music schedule, tropical drink specials, and terracotta workshop slots!</p>
+        <p class="lang-th">เราอัปเดตตารางเวลาของชุมชนและตารางกิจกรรมใหม่ๆ อยู่เสมอทางโซเชียลมีเดีย ติดตามเราเพื่อตรวจสอบตารางการแสดงดนตรีประจำสัปดาห์ เมนูเครื่องดื่มใหม่ หรือจองคิวเวิร์กช็อปปั้นดินเผา!</p>
+        <p class="lang-ko">우리는 공식 소셜 계정을 통해 다양한 커뮤니티 일정과 이벤트 소식을 가장 빠르게 업데이트합니다. 이번 주 라이브 음악 라인업, 오늘의 과일 음료, 그리고 테라코타 워크숍 신청 가능 일정을 확인해 보세요!</p>
+        
         <div class="social-links">
           <a href="https://www.instagram.com/parang_cnx/" target="_blank" rel="noopener noreferrer" class="social-btn">
             📸 Instagram @parang_cnx
@@ -280,28 +465,62 @@
     <div class="container">
       <div class="grid-2">
         <div>
-          <span class="section-title-tag">Garden Cafe</span>
-          <h2 class="section-title">Cozy Garden & <span class="highlight-gold">Tasty Sips</span></h2>
-          <p>Our cafe is a peaceful green oasis where you can read, draw, write, or sit and chat with fellow travelers. Sip on meticulously prepared cold beverages, refreshing smoothies, and artisan lattes under the canopy.</p>
-          <p>We specialize in refreshing beverages designed to inspire you in the tropical heat. Sit in our cozy garden, listen to music, and let new ideas flow naturally.</p>
+          <span class="section-title-tag">
+            <span class="lang-en">Garden Cafe</span>
+            <span class="lang-th">การ์เดนคาเฟ่</span>
+            <span class="lang-ko">가든 카페</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-en">Cozy Garden & <span class="highlight-gold">Tasty Sips</span></span>
+            <span class="lang-th">สวนแสนสบาย & <span class="highlight-gold">เครื่องดื่มแก้วโปรด</span></span>
+            <span class="lang-ko">아늑한 정원 & <span class="highlight-gold">감성 음료</span></span>
+          </h2>
+          
+          <p class="lang-en">Our cafe is a peaceful green oasis where you can read, draw, write, or sit and chat with fellow travelers. Sip on meticulously prepared cold beverages, refreshing smoothies, and artisan lattes under the canopy.</p>
+          <p class="lang-en">We specialize in refreshing beverages designed to inspire you in the tropical heat. Sit in our cozy garden, listen to music, and let new ideas flow naturally.</p>
+          
+          <p class="lang-th">คาเฟ่ของเราคือโอเอซิสสีเขียวอันเงียบสงบที่คุณสามารถอ่านหนังสือ วาดรูป เขียนบันทึก หรือนั่งคุยกับเพื่อนนักเดินทาง ลิ้มลองเครื่องดื่มเย็นที่จัดเตรียมอย่างพิถีพิถัน สมูทตี้แสนสดชื่น และลาเต้รสชาติพรีเมียมภายใต้ร่มไม้</p>
+          <p class="lang-th">เราเชี่ยวชาญด้านเครื่องดื่มสูตรพิเศษที่ออกแบบมาเพื่อเติมความสดชื่นและเพิ่มแรงบันดาลใจให้คุณท่ามกลางอากาศร้อน ผ่อนคลายในสวนที่แสนสบาย ฟังดนตรีไพเราะ และปล่อยให้ไอเดียสร้างสรรค์โลดแล่นอย่างเป็นธรรมชาติ</p>
+          
+          <p class="lang-ko">정원 카페는 책을 읽고, 그림을 그리고, 글을 쓰거나 동료 여행자들과 편안하게 담소를 나눌 수 있는 도심 속 초록빛 오아시스입니다. 울창한 나무 그늘 아래에서 정성스레 준비한 시원한 음료, 과일 스무디, 그리고 수제 라떼를 즐겨보세요.</p>
+          <p class="lang-ko">우리는 더위에 지친 몸과 마음에 생기를 불어넣고 창작 영감을 돋우는 청량한 음료들을 주로 선보입니다. 고요하고 아늑한 정원에 앉아, 흘러나오는 음악을 들으며 자유롭게 창의적 아이디어를 떠올려 보세요.</p>
           
           <!-- Selected Cafe Favorites -->
           <div class="menu-highlight-list">
             <div class="menu-item">
-              <h4>Mango Passion Tropical Smoothie</h4>
-              <span>Refreshing</span>
+              <h4 class="lang-en">Mango Passion Tropical Smoothie</h4>
+              <h4 class="lang-th">สมูทตี้มะม่วงเสาวรส</h4>
+              <h4 class="lang-ko">망고 패션프루트 스무디</h4>
+              
+              <span class="lang-en">Refreshing</span>
+              <span class="lang-th">สดชื่นเป็นพิเศษ</span>
+              <span class="lang-ko">리프레싱</span>
             </div>
             <div class="menu-item">
-              <h4>Organic Iced Matcha Latte</h4>
-              <span>Earthy & Rich</span>
+              <h4 class="lang-en">Organic Iced Matcha Latte</h4>
+              <h4 class="lang-th">มัทฉะลาเต้เย็นออร์แกนิก</h4>
+              <h4 class="lang-ko">유기농 아이스 말차 라떼</h4>
+              
+              <span class="lang-en">Earthy & Rich</span>
+              <span class="lang-th">เข้มข้นกลมกล่อม</span>
+              <span class="lang-ko">진하고 풍부함</span>
             </div>
             <div class="menu-item">
-              <h4>Slow Drip Northern Thai Coffee</h4>
-              <span>Artisanal</span>
+              <h4 class="lang-en">Slow Drip Northern Thai Coffee</h4>
+              <h4 class="lang-th">กาแฟดริปเชียงใหม่ดั้งเดิม</h4>
+              <h4 class="lang-ko">태국 북부 슬로우 드립 커피</h4>
+              
+              <span class="lang-en">Artisanal</span>
+              <span class="lang-th">ดริปอย่างพิถีพิถัน</span>
+              <span class="lang-ko">아티저널 드립</span>
             </div>
           </div>
           
-          <p style="font-size: 0.9rem; font-style: italic; margin-top: 1.5rem; color: var(--text-muted);">* Plus a rotating seasonal menu of local fruit mocktails, smoothies, and delicious treats.</p>
+          <p style="font-size: 0.9rem; font-style: italic; margin-top: 1.5rem; color: var(--text-muted);">
+            <span class="lang-en">* Plus a rotating seasonal menu of local fruit mocktails, smoothies, and delicious treats.</span>
+            <span class="lang-th">* พร้อมเมนูผลไม้ท้องถิ่นตามฤดูกาล สมูทตี้ และเบเกอรี่แสนอร่อยที่หมุนเวียนมาให้ลิ้มลอง</span>
+            <span class="lang-ko">* 로컬 제철 과일 모히토/에이드, 스무디 및 맛있는 수제 디저트 메뉴가 시즌별로 로테이션됩니다.</span>
+          </p>
         </div>
         
         <!-- Restored High-Aesthetic Real Cafe Latte Image -->
@@ -316,9 +535,19 @@
   <section id="stay" class="section" style="background-color: #0b0d0c; border-top: 1px solid var(--border-color);">
     <div class="container">
       <div class="section-header">
-        <span class="section-title-tag">Art Stay</span>
-        <h2 class="section-title">Stay inside the <span class="highlight-clay">Art compound</span></h2>
-        <p>Experience living like a local in freshly renovated, stylish accommodations designed with creative details and natural light. Choose the booking option that matches your travel style.</p>
+        <span class="section-title-tag">
+          <span class="lang-en">Art Stay</span>
+          <span class="lang-th">อาร์ตสเตย์</span>
+          <span class="lang-ko">아트 스테이</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Stay inside the <span class="highlight-clay">Art compound</span></span>
+          <span class="lang-th">พักผ่อนใน<span class="highlight-clay">คอมพาวนด์ศิลปะ</span></span>
+          <span class="lang-ko">예술 복합 공간에서의 <span class="highlight-clay">하루</span></span>
+        </h2>
+        <p class="lang-en">Experience living like a local in freshly renovated, stylish accommodations designed with creative details and natural light. Choose the booking option that matches your travel style.</p>
+        <p class="lang-th">สัมผัสประสบการณ์การใช้ชีวิตแบบคนท้องถิ่นในห้องพักที่ได้รับการปรับปรุงใหม่ ตกแต่งด้วยรายละเอียดที่สร้างสรรค์และรับแสงธรรมชาติ เลือกช่องทางการจองที่ตรงกับสไตล์การเดินทางของคุณ</p>
+        <p class="lang-ko">감각적인 크리에이티브 디테일과 따스한 자연 채광이 가득한, 새롭게 단장한 스타일리시한 숙소에서 현지인처럼 살아보는 경험을 해보세요. 귀하의 여행 스타일에 맞는 예약 옵션을 선택하실 수 있습니다.</p>
       </div>
 
       <div class="stay-cards">
@@ -328,17 +557,32 @@
           <!-- Restored High-Aesthetic Guest Suite Image -->
           <div class="stay-img-wrapper">
             <img src="assets/images/real_stay_room.png" alt="Boutique Art Stay Cozy Room" loading="lazy">
-            <div class="stay-badge">Individual Rooms</div>
+            <div class="stay-badge">
+              <span class="lang-en">Individual Rooms</span>
+              <span class="lang-th">ห้องพักส่วนตัว</span>
+              <span class="lang-ko">개별 객실</span>
+            </div>
           </div>
           <div class="stay-info">
-            <h3>Cozy Boutique Rooms</h3>
-            <p>Spacious, quiet, and air-conditioned private rooms equipped with private bathrooms, high-speed WiFi, and access to our lush garden patio. Perfect for solo adventurers, couples, or digital nomads looking for a central, quiet nest in Chiang Mai Old Town.</p>
+            
+            <h3 class="lang-en">Cozy Boutique Rooms</h3>
+            <h3 class="lang-th">ห้องพักบูติกแสนสบาย</h3>
+            <h3 class="lang-ko">아늑한 부티크 객실</h3>
+            
+            <p class="lang-en">Spacious, quiet, and air-conditioned private rooms equipped with private bathrooms, high-speed WiFi, and access to our lush garden patio. Perfect for solo adventurers, couples, or digital nomads looking for a central, quiet nest in Chiang Mai Old Town.</p>
+            <p class="lang-th">ห้องส่วนตัวที่กว้างขวาง เงียบสงบ และมีเครื่องปรับอากาศ พร้อมห้องน้ำส่วนตัว อินเทอร์เน็ตความเร็วสูง และสามารถเดินเข้าลานสวนหย่อมด้านนอกได้ เหมาะสำหรับผู้ที่เดินทางคนเดียว คู่รัก หรือดิจิทัลโนแมดที่มองหารังนอนที่เงียบสงบใจกลางเมืองเก่าเชียงใหม่</p>
+            <p class="lang-ko">넓고 고요하며 쾌적한 에어컨 시설을 갖춘 개인 객실로, 전용 욕실, 초고속 와이파이, 푸른 정원 테라스 접근성을 제공합니다. 치앙마이 올드타운 중심에서 조용하고 편안한 안식처를 찾는 나홀로 여행객, 커플, 또는 디지털 노마드에게 최적입니다.</p>
+            
             <div class="stay-details">
               <span class="stay-detail-item">🛏️ Double / Twin</span>
               <span class="stay-detail-item">❄️ AC & Wifi</span>
               <span class="stay-detail-item">🚿 Private Bath</span>
             </div>
-            <a href="https://www.booking.com/hotel/th/pa-rang-cafe-amp-art-stay.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-align: center;">Book a Room on Booking.com</a>
+            <a href="https://www.booking.com/hotel/th/pa-rang-cafe-amp-art-stay.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-align: center;">
+              <span class="lang-en">Book a Room on Booking.com</span>
+              <span class="lang-th">จองห้องพักบน Booking.com</span>
+              <span class="lang-ko">Booking.com에서 객실 예약하기</span>
+            </a>
           </div>
         </div>
 
@@ -347,17 +591,32 @@
           <!-- Restored High-Aesthetic Heritage Courtyard Image -->
           <div class="stay-img-wrapper">
             <img src="assets/images/real_hero_garden.png" alt="Pa Rang Entire Creative Compound" loading="lazy">
-            <div class="stay-badge">Entire Sanctuary</div>
+            <div class="stay-badge">
+              <span class="lang-en">Entire Sanctuary</span>
+              <span class="lang-th">เหมาบ้านทั้งหมด</span>
+              <span class="lang-ko">전체 대관</span>
+            </div>
           </div>
           <div class="stay-info">
-            <h3>The Entire Art Compound</h3>
-            <p>Rent our entire heritage estate including multiple boutique rooms, our communal kitchen area, the beautiful rooftop terrace, and full private use of our central courtyard garden. Highly recommended for creative retreats, collective residencies, workshops, or family gatherings.</p>
+            
+            <h3 class="lang-en">The Entire Art Compound</h3>
+            <h3 class="lang-th">เหมาคอมพาวนด์ศิลปะทั้งหมด</h3>
+            <h3 class="lang-ko">아트 컴파운드 전체 대관</h3>
+            
+            <p class="lang-en">Rent our entire heritage estate including multiple boutique rooms, our communal kitchen area, the beautiful rooftop terrace, and full private use of our central courtyard garden. Highly recommended for creative retreats, collective residencies, workshops, or family gatherings.</p>
+            <p class="lang-th">เช่าเหมาบ้านโบราณทั้งหมดของเรา ซึ่งรวมถึงห้องพักบูติกหลายห้อง พื้นที่ครัวส่วนกลาง ระเบียงดาดฟ้าที่สวยงาม และการใช้งานสวนลานกลางบ้านแบบส่วนตัว แนะนำอย่างยิ่งสำหรับทริปสร้างสรรค์ ค่ายกิจกรรมกลุ่ม เวิร์กช็อป หรือการพบปะสังสรรค์ในครอบครัว</p>
+            <p class="lang-ko">여러 개의 부티크 객실, 공용 주방 공간, 아름다운 루프탑 테라스, 중앙 정원 전체를 단독으로 사용하는 전체 대관 대여 옵션입니다. 크리에이티브 워크숍, 예술가 단체 레지던시, 동호회 엠티, 혹은 가족 모임 숙소로 강력하게 추천합니다.</p>
+            
             <div class="stay-details">
               <span class="stay-detail-item">🏡 Whole Estate</span>
               <span class="stay-detail-item">👥 Perfect for Groups</span>
               <span class="stay-detail-item">🌸 Full Garden Access</span>
             </div>
-            <a href="https://www.airbnb.com/rooms/914341186465408542" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="text-align: center;">Book Entire Compound on Airbnb</a>
+            <a href="https://www.airbnb.com/rooms/914341186465408542" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="text-align: center;">
+              <span class="lang-en">Book Entire Compound on Airbnb</span>
+              <span class="lang-th">จองเหมาหลังบน Airbnb</span>
+              <span class="lang-ko">Airbnb에서 독채 전체 예약하기</span>
+            </a>
           </div>
         </div>
         
@@ -372,82 +631,181 @@
         
         <!-- Residency information details card (de-emphasized) -->
         <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); padding: 2.5rem;">
-          <span class="section-title-tag">Residency Program</span>
-          <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">Creative <span class="highlight-clay">Exchange</span></h2>
-          <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">We support artistic exploration and slow research by offering a comfortable, inspiring compound in Old Town. Selected artists reside in private rooms and connect with Chiang Mai's local art ecosystem.</p>
+          <span class="section-title-tag">
+            <span class="lang-en">Residency Program</span>
+            <span class="lang-th">โปรแกรมศิลปินพำนัก</span>
+            <span class="lang-ko">아티스트 레지던시</span>
+          </span>
+          <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">
+            <span class="lang-en">Creative <span class="highlight-clay">Exchange</span></span>
+            <span class="lang-th">การแลกเปลี่ยน<span class="highlight-clay">สร้างสรรค์</span></span>
+            <span class="lang-ko">창의적 <span class="highlight-clay">예술 교류</span></span>
+          </h2>
+          <p class="lang-en" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">We support artistic exploration and slow research by offering a comfortable, inspiring compound in Old Town. Selected artists reside in private rooms and connect with Chiang Mai's local art ecosystem.</p>
+          <p class="lang-th" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">เราสนับสนุนการค้นหาทางศิลปะและการทำงานวิจัยอย่างช้าๆ โดยมอบที่พักแสนสบายและสร้างแรงบันดาลใจในเมืองเก่าเชียงใหม่ ศิลปินที่ได้รับการคัดเลือกจะเข้าพักในห้องส่วนตัวและเชื่อมโยงกับระบบนิเวศศิลปะท้องถิ่นของเชียงใหม่</p>
+          <p class="lang-ko" style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">우리는 올드타운의 편안하고 영감을 주는 컴파운드를 제공하여 작가들의 예술적 탐구와 심도 있는 연구 작업을 지원합니다. 최종 선정된 예술가들은 개인 객실에 머물며 치앙마이의 풍요로운 예술 생태계와 긴밀하게 소통하게 됩니다.</p>
           
           <div style="margin: 2rem 0; padding-left: 1.25rem; border-left: 2px solid var(--accent-clay);">
-            <h4 style="font-family: var(--font-nav); font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 0.4rem;">💵 Subsidized Rates</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">To support independent artists, we offer heavily discounted, subsidized rates that simply cover local cleaning, utilities, and room maintenance.</p>
+            <h4 class="lang-en" style="font-family: var(--font-nav); font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 0.4rem;">💵 Subsidized Rates</h4>
+            <h4 class="lang-th" style="font-family: var(--font-nav); font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 0.4rem;">💵 อัตราค่าสนับสนุนพิเศษ</h4>
+            <h4 class="lang-ko" style="font-family: var(--font-nav); font-size: 0.9rem; color: var(--accent-gold); margin-bottom: 0.4rem;">💵 비용 혜택 제공</h4>
+            
+            <p class="lang-en" style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">To support independent artists, we offer heavily discounted, subsidized rates that simply cover local cleaning, utilities, and room maintenance.</p>
+            <p class="lang-th" style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">เพื่อสนับสนุนศิลปินอิสระ เรามอบราคาพิเศษที่เป็นอัตราสนับสนุน ซึ่งช่วยครอบคลุมเพียงแค่ค่าทำความสะอาด ค่าน้ำค่ไฟ และค่าบำรุงรักษาห้องพักเท่านั้น</p>
+            <p class="lang-ko" style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">독립 예술가들을 지원하기 위해, 청소비, 공공요금 및 객실 유지보수 실비만 적용된 매우 저렴한 우대 요금을 제공합니다.</p>
           </div>
 
           <div style="margin: 2rem 0; padding-left: 1.25rem; border-left: 2px solid var(--accent-gold);">
-            <h4 style="font-family: var(--font-nav); font-size: 0.9rem; color: var(--accent-clay); margin-bottom: 0.4rem;">🤝 Community Share</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">In exchange for subsidized support, resident artists share their creative focus by hosting a Saturday terracotta workshop, a live sound session, or an artist talk open to the public.</p>
+            <h4 class="lang-en" style="font-family: var(--font-nav); font-size: 0.9rem; color: var(--accent-clay); margin-bottom: 0.4rem;">🤝 Community Share</h4>
+            <h4 class="lang-th" style="font-family: var(--font-nav); font-size: 0.9rem; color: var(--accent-clay); margin-bottom: 0.4rem;">🤝 การแบ่งปันสู่ชุมชน</h4>
+            <h4 class="lang-ko" style="font-family: var(--font-nav); font-size: 0.9rem; color: var(--accent-clay); margin-bottom: 0.4rem;">🤝 공동체 예술 기여</h4>
+            
+            <p class="lang-en" style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">In exchange for subsidized support, resident artists share their creative focus by hosting a Saturday terracotta workshop, a live sound session, or an artist talk open to the public.</p>
+            <p class="lang-th" style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">เพื่อแลกกับการสนับสนุน ศิลปินพำนักจะแบ่งปันงานศิลปะสร้างสรรค์ของตนด้วยการเป็นเจ้าภาพจัดเวิร์กช็อปดินเผาในวันเสาร์ งานแสดงดนตรีสด หรือการจัดเสวนาเกี่ยวกับศิลปะที่เปิดให้สาธารณชนเข้าชม</p>
+            <p class="lang-ko" style="font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;">혜택 요금 제공에 대한 교류의 일환으로, 입주 작가들은 매주 토요일 테라코타 워크숍 진행, 어쿠스틱 라이브 사운드 쇼케이스, 혹은 대중에게 열린 아티스트 토크 등을 개최하여 자신들의 재능을 나눕니다.</p>
           </div>
 
           <ul style="list-style: none; padding: 0; margin-top: 2.5rem; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
-            <li style="margin-bottom: 0.75rem;">⏳ <strong>Duration:</strong> 1 week to 1 month</li>
-            <li style="margin-bottom: 0.75rem;">🛠️ <strong>Resources:</strong> Shared garden workspace, studio tools, AC double suite</li>
-            <li>📋 <strong>Selection:</strong> Reviewed on a rolling basis; intent-aligned applicants receive pricing logs</li>
+            <li>
+              <span class="lang-en">⏳ <strong>Duration:</strong> 1 week to 1 month</span>
+              <span class="lang-th">⏳ <strong>ระยะเวลาเข้าพัก:</strong> 1 สัปดาห์ ถึง 1 เดือน</span>
+              <span class="lang-ko">⏳ <strong>입주 기간:</strong> 1주일 ~ 1개월</span>
+            </li>
+            <li style="margin-top: 0.75rem;">
+              <span class="lang-en">🛠️ <strong>Resources:</strong> Shared garden workspace, studio tools, AC double suite</span>
+              <span class="lang-th">🛠️ <strong>สิ่งอำนวยความสะดวก:</strong> พื้นที่ทำงานในสวนหย่อม, เครื่องมือสตูดิโอ, ห้องเตียงคู่พร้อมเครื่องปรับอากาศ</span>
+              <span class="lang-ko">🛠️ <strong>제공 내역:</strong> 정원 공용 작업 공간, 창작 장비, 에어컨 완비 더블룸</span>
+            </li>
+            <li style="margin-top: 0.75rem;">
+              <span class="lang-en">📋 <strong>Selection:</strong> Reviewed on a rolling basis; intent-aligned applicants receive pricing logs</span>
+              <span class="lang-th">📋 <strong>การคัดเลือก:</strong> พิจารณาใบสมัครอย่างต่อเนื่อง ผู้สมัครที่มีเป้าหมายตรงกันจะได้รับรายละเอียดค่าใช้จ่ายสนับสนุน</span>
+              <span class="lang-ko">📋 <strong>선정 방식:</strong> 상시 접수 및 심사. 작업 성격이 일치하는 지원자에게 세부 지원 일정 및 가격 안내문 전송</span>
+            </li>
           </ul>
         </div>
 
         <!-- Compact residency application inquiry form -->
         <div>
-          <span class="section-title-tag">Apply Now</span>
-          <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">Residency <span class="highlight-gold">Inquiry</span></h2>
-          <p style="margin-bottom: 2rem; font-size: 0.95rem;">Interested in a creative stay? Fill out this simple inquiry. If selected, we will email you with availability logs and exchange rate details.</p>
+          <span class="section-title-tag">
+            <span class="lang-en">Apply Now</span>
+            <span class="lang-th">สมัครเลย</span>
+            <span class="lang-ko">지금 지원하기</span>
+          </span>
+          <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">
+            <span class="lang-en">Residency <span class="highlight-gold">Inquiry</span></span>
+            <span class="lang-th">ส่งข้อมูล<span class="highlight-gold">สอบถาม</span></span>
+            <span class="lang-ko">레지던시 <span class="highlight-gold">입주 문의</span></span>
+          </h2>
+          <p class="lang-en" style="margin-bottom: 2rem; font-size: 0.95rem;">Interested in a creative stay? Fill out this simple inquiry. If selected, we will email you with availability logs and exchange rate details.</p>
+          <p class="lang-th" style="margin-bottom: 2rem; font-size: 0.95rem;">สนใจเข้าพำนักเพื่อสร้างสรรค์งานใช่หรือไม่? กรอกแบบฟอร์มสอบถามข้อมูลสั้นๆ นี้ หากผ่านการคัดเลือก เราจะส่งอีเมลแจ้งข้อมูลห้องว่างและรายละเอียดอัตราแลกเปลี่ยนค่าใช้จ่ายให้คุณ</p>
+          <p class="lang-ko" style="margin-bottom: 2rem; font-size: 0.95rem;">창의적 창작 여정을 희망하시나요? 아래 양식을 작성해 주세요. 입주 작가로 선정되시는 경우, 객실 가능 일정 및 가격 세부 내용을 메일로 보내드립니다.</p>
           
           <form id="residency-form">
             <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
               
               <div class="form-group">
-                <label for="form-name">Full Name</label>
+                <label for="form-name">
+                  <span class="lang-en">Full Name</span>
+                  <span class="lang-th">ชื่อ-นามสกุล</span>
+                  <span class="lang-ko">성함</span>
+                </label>
                 <input type="text" id="form-name" class="form-input" placeholder="e.g. Minji Kim" required>
               </div>
 
               <div class="form-group">
-                <label for="form-email">Email Address</label>
+                <label for="form-email">
+                  <span class="lang-en">Email Address</span>
+                  <span class="lang-th">อีเมลติดต่อ</span>
+                  <span class="lang-ko">이메일 주소</span>
+                </label>
                 <input type="email" id="form-email" class="form-input" placeholder="name@example.com" required>
               </div>
 
               <div class="form-group">
-                <label for="form-discipline">Artistic Discipline</label>
+                <label for="form-discipline">
+                  <span class="lang-en">Artistic Discipline</span>
+                  <span class="lang-th">สาขาศิลปะที่เชี่ยวชาญ</span>
+                  <span class="lang-ko">예술 활동 분야</span>
+                </label>
                 <input type="text" id="form-discipline" class="form-input" placeholder="e.g. Visual Artist, Musician, Writer" required>
               </div>
 
               <div class="form-group">
-                <label for="form-portfolio">Portfolio / Social Media Link</label>
+                <label for="form-portfolio">
+                  <span class="lang-en">Portfolio / Social Media Link</span>
+                  <span class="lang-th">ลิงก์ผลงาน / โซเชียลมีเดีย</span>
+                  <span class="lang-ko">포트폴리오 혹은 소셜 계정 링크</span>
+                </label>
                 <input type="url" id="form-portfolio" class="form-input" placeholder="https://mywork.com or @handle" required>
               </div>
 
               <div class="form-group">
-                <label for="form-share">Preferred Community Share</label>
+                <label for="form-share">
+                  <span class="lang-en">Preferred Community Share</span>
+                  <span class="lang-th">รูปแบบการแบ่งปันความรู้ที่สนใจ</span>
+                  <span class="lang-ko">선호하는 공동체 기여 방식</span>
+                </label>
                 <select id="form-share" class="form-input" required>
-                  <option value="" disabled selected>Select an option...</option>
-                  <option value="Lead a Terracotta Clay Workshop">Lead a Terracotta Clay Workshop</option>
-                  <option value="Host a Garden Acoustic Set">Host a Garden Acoustic Set</option>
-                  <option value="Deliver an Artist Talk">Deliver an Artist Talk or Lecture</option>
-                  <option value="Coordinate a Shared Supper">Coordinate a Shared Supper</option>
-                  <option value="Conduct a Skillsharing Session">Conduct a Skillsharing Session</option>
-                  <option value="Other Creative Exchange">Other Creative Exchange</option>
+                  <option value="" disabled selected class="lang-en">Select an option...</option>
+                  <option value="" disabled selected class="lang-th">กรุณาเลือก...</option>
+                  <option value="" disabled selected class="lang-ko">선택해 주세요...</option>
+                  
+                  <option value="Lead a Terracotta Clay Workshop" class="lang-en">Lead a Terracotta Clay Workshop</option>
+                  <option value="Lead a Terracotta Clay Workshop" class="lang-th">นำเวิร์กช็อปดินเผาเทอราคอตตา</option>
+                  <option value="Lead a Terracotta Clay Workshop" class="lang-ko">테라코타 흙 빚기 워크숍 진행</option>
+                  
+                  <option value="Host a Garden Acoustic Set" class="lang-en">Host a Garden Acoustic Set</option>
+                  <option value="Host a Garden Acoustic Set" class="lang-th">จัดชุดการแสดงดนตรีอะคูสติกในสวน</option>
+                  <option value="Host a Garden Acoustic Set" class="lang-ko">정원 어쿠스틱 라이브 공연 개최</option>
+                  
+                  <option value="Deliver an Artist Talk" class="lang-en">Deliver an Artist Talk or Lecture</option>
+                  <option value="Deliver an Artist Talk" class="lang-th">จัดเสวนาหรือบรรยายเกี่ยวกับศิลปะ</option>
+                  <option value="Deliver an Artist Talk" class="lang-ko">아티스트 토크 혹은 세미나 진행</option>
+                  
+                  <option value="Coordinate a Shared Supper" class="lang-en">Coordinate a Shared Supper</option>
+                  <option value="Coordinate a Shared Supper" class="lang-th">จัดมื้อค่ำเพื่อพบปะชุมชน</option>
+                  <option value="Coordinate a Shared Supper" class="lang-ko">커뮤니티 소셜 디너 조율</option>
+                  
+                  <option value="Conduct a Skillsharing Session" class="lang-en">Conduct a Skillsharing Session</option>
+                  <option value="Conduct a Skillsharing Session" class="lang-th">จัดเซสชันแบ่งปันวิชาความรู้</option>
+                  <option value="Conduct a Skillsharing Session" class="lang-ko">기술 공유 및 스킬 셰어 클래스 진행</option>
+                  
+                  <option value="Other Creative Exchange" class="lang-en">Other Creative Exchange</option>
+                  <option value="Other Creative Exchange" class="lang-th">การแลกเปลี่ยนสร้างสรรค์รูปแบบอื่น</option>
+                  <option value="Other Creative Exchange" class="lang-ko">기타 창의적인 예술 교류 활동</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="form-dates">Preferred Dates & Duration</label>
+                <label for="form-dates">
+                  <span class="lang-en">Preferred Dates & Duration</span>
+                  <span class="lang-th">วันที่ต้องการเข้าพัก & ระยะเวลา</span>
+                  <span class="lang-ko">희망 입주 일정 및 기간</span>
+                </label>
                 <input type="text" id="form-dates" class="form-input" placeholder="e.g. November 1st (2 Weeks)" required>
               </div>
 
               <div class="form-group">
-                <label for="form-proposal">Project Proposal & Practice (Brief)</label>
+                <label for="form-proposal">
+                  <span class="lang-en">Project Proposal & Practice (Brief)</span>
+                  <span class="lang-th">ข้อเสนอโครงการและแนวคิดการทำงาน (โดยสังเขป)</span>
+                  <span class="lang-ko">프로젝트 계획 및 작업 소개 (간략히)</span>
+                </label>
                 <textarea id="form-proposal" class="form-input" style="height: 100px;" placeholder="Briefly describe your creative work, your stay duration, and what you plan to share..." required></textarea>
               </div>
 
               <div style="margin-top: 1rem;">
-                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.1rem;">Submit Inquiry</button>
-                <p class="form-note" style="text-align: center; margin-top: 0.75rem;">Compiles your proposal into a secure draft email for verification.</p>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.1rem;">
+                  <span class="lang-en">Submit Inquiry</span>
+                  <span class="lang-th">ส่งข้อมูลสอบถาม</span>
+                  <span class="lang-ko">지원서 제출하기</span>
+                </button>
+                
+                <p class="form-note" style="text-align: center; margin-top: 0.75rem;">
+                  <span class="lang-en">Compiles your proposal into a secure draft email for verification.</span>
+                  <span class="lang-th">รวบรวมข้อมูลข้อเสนอของคุณลงในแบบร่างอีเมลที่ปลอดภัยเพื่อตรวจสอบก่อนส่ง</span>
+                  <span class="lang-ko">제출 즉시 이메일 클라이언트에 안전하게 임시 보관함 형태로 자동 작성됩니다.</span>
+                </p>
               </div>
 
             </div>
@@ -464,25 +822,66 @@
       <div class="contact-layout">
         
         <div class="contact-info-panel">
-          <span class="section-title-tag">Find Us</span>
-          <h2 class="section-title">The Art Sanctuary</h2>
+          <span class="section-title-tag">
+            <span class="lang-en">Find Us</span>
+            <span class="lang-th">ที่ตั้งของเรา</span>
+            <span class="lang-ko">찾아오시는 길</span>
+          </span>
+          <h2 class="section-title">
+            <span class="lang-en">The Art Sanctuary</span>
+            <span class="lang-th">พื้นที่พักผ่อนแห่งศิลปะ</span>
+            <span class="lang-ko">예술 안식처</span>
+          </h2>
           
           <div class="contact-block">
-            <h4>📍 Address</h4>
-            <p>1 Sinharat Road Lane 2, Chiang Mai, Thailand</p>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.25rem;">(Located in Old Town, right by Wat Phra Singh and Suan Dok Gate)</p>
+            <h4 class="lang-en">📍 Address</h4>
+            <h4 class="lang-th">📍 ที่ตั้ง</h4>
+            <h4 class="lang-ko">📍 주소</h4>
+            
+            <p class="lang-en">1 Sinharat Road Lane 2, Chiang Mai, Thailand</p>
+            <p class="lang-th">1 ถนนสิงหราช ซอย 2, ต.ศรีภูมิ อ.เมืองเชียงใหม่, ประเทศไทย</p>
+            <p class="lang-ko">1 Sinharat Road Lane 2, Chiang Mai, Thailand</p>
+            
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.25rem;">
+              <span class="lang-en">(Located in Old Town, right by Wat Phra Singh and Suan Dok Gate)</span>
+              <span class="lang-th">(ตั้งอยู่ในคูเมืองเก่า ข้างวัดพระสิงห์วรมหาวิหารและใกล้ประตูสวนดอก)</span>
+              <span class="lang-ko">(올드타운 내 위치, 왓 프라싱 및 수안독 문 근처)</span>
+            </p>
           </div>
 
           <div class="contact-block">
-            <h4>🕒 Cafe Hours</h4>
-            <p>Open Daily &mdash; 9:00 AM to 6:00 PM</p>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.25rem;">(Garden events and acoustical music schedules vary, check Instagram!)</p>
+            <h4 class="lang-en">🕒 Cafe Hours</h4>
+            <h4 class="lang-th">🕒 เวลาเปิดบริการคาเฟ่</h4>
+            <h4 class="lang-ko">🕒 카페 영업시간</h4>
+            
+            <p class="lang-en">Open Daily &mdash; 9:00 AM to 6:00 PM</p>
+            <p class="lang-th">เปิดบริการทุกวัน &mdash; 9:00 น. ถึง 18:00 น.</p>
+            <p class="lang-ko">매일 오픈 &mdash; 오전 9:00 ~ 오후 6:00</p>
+            
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.25rem;">
+              <span class="lang-en">(Garden events and acoustical music schedules vary, check Instagram!)</span>
+              <span class="lang-th">(ตารางกิจกรรมในสวนและกำหนดการแสดงดนตรีอาจเปลี่ยนแปลงได้ กรุณาเช็คทางอินสตาแกรม!)</span>
+              <span class="lang-ko">(정원 음악 공연 및 이벤트 일정은 유동적이니 인스타그램을 확인해 주세요!)</span>
+            </p>
           </div>
 
           <div class="contact-block">
-            <h4>📧 Direct Contacts</h4>
-            <p>Residency & Stay Inquiry: <a href="mailto:parang.cnx@gmail.com" class="highlight-clay">parang.cnx@gmail.com</a></p>
-            <p>Social Media Inbox: <a href="https://www.instagram.com/parang_cnx/" target="_blank" rel="noopener noreferrer" class="highlight-gold">@parang_cnx</a></p>
+            <h4 class="lang-en">📧 Direct Contacts</h4>
+            <h4 class="lang-th">📧 ช่องทางการติดต่อโดยตรง</h4>
+            <h4 class="lang-ko">📧 연락처</h4>
+            
+            <p>
+              <span class="lang-en">Residency & Stay Inquiry:</span>
+              <span class="lang-th">สอบถามเรื่องที่พักและศิลปินพำนัก:</span>
+              <span class="lang-ko">레지던시 및 숙박 문의:</span>
+              <a href="mailto:parang.cnx@gmail.com" class="highlight-clay">parang.cnx@gmail.com</a>
+            </p>
+            <p>
+              <span class="lang-en">Social Media Inbox:</span>
+              <span class="lang-th">กล่องข้อความโซเชียลมีเดีย:</span>
+              <span class="lang-ko">소셜 미디어 DM:</span>
+              <a href="https://www.instagram.com/parang_cnx/" target="_blank" rel="noopener noreferrer" class="highlight-gold">@parang_cnx</a>
+            </p>
           </div>
         </div>
 
@@ -505,11 +904,41 @@
   <footer class="main-footer">
     <div class="container">
       <ul class="footer-nav">
-        <li><a href="#about">The Space</a></li>
-        <li><a href="#events">Events & Workshops</a></li>
-        <li><a href="#cafe">Cafe</a></li>
-        <li><a href="#stay">Art Stay</a></li>
-        <li><a href="#apply">Apply</a></li>
+        <li>
+          <a href="#about">
+            <span class="lang-en">The Space</span>
+            <span class="lang-th">เดอะสเปซ</span>
+            <span class="lang-ko">공간 소개</span>
+          </a>
+        </li>
+        <li>
+          <a href="#events">
+            <span class="lang-en">Events & Workshops</span>
+            <span class="lang-th">กิจกรรม</span>
+            <span class="lang-ko">이벤트</span>
+          </a>
+        </li>
+        <li>
+          <a href="#cafe">
+            <span class="lang-en">Cafe</span>
+            <span class="lang-th">คาเฟ่</span>
+            <span class="lang-ko">카페</span>
+          </a>
+        </li>
+        <li>
+          <a href="#stay">
+            <span class="lang-en">Art Stay</span>
+            <span class="lang-th">ห้องพัก</span>
+            <span class="lang-ko">아트 스테이</span>
+          </a>
+        </li>
+        <li>
+          <a href="#apply">
+            <span class="lang-en">Apply</span>
+            <span class="lang-th">สมัคร</span>
+            <span class="lang-ko">지원하기</span>
+          </a>
+        </li>
       </ul>
       <p>&copy; <span id="current-year"></span> Pa Rang Cafe & Art Stay. Chiang Mai, Thailand. All Rights Reserved.</p>
       <p style="font-size: 0.7rem; color: #4b5850; letter-spacing: 0.05em; margin-top: 1rem;">
@@ -522,17 +951,35 @@
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal-card">
       <span class="modal-icon">📨</span>
-      <h3 id="modal-title">Proposal Compiled!</h3>
-      <p id="modal-desc">Since this is a fast, low-maintenance static site, we will compile your application directly into a pre-filled email draft. Click below to launch your email client, or copy the compiled text.</p>
+      
+      <h3 class="lang-en">Proposal Compiled!</h3>
+      <h3 class="lang-th">รวบรวมข้อมูลโครงการเสร็จสิ้น!</h3>
+      <h3 class="lang-ko">지원서 임시 저장 완료!</h3>
+      
+      <p class="lang-en">Since this is a fast, low-maintenance static site, we will compile your application directly into a pre-filled email draft. Click below to launch your email client, or copy the compiled text.</p>
+      <p class="lang-th">เนื่องจากเว็บไซต์นี้เป็นเว็บสแตติกความเร็วสูง เราจะรวบรวมใบสมัครของคุณลงในอีเมลร่างที่เตรียมไว้โดยตรง คลิกด้านล่างเพื่อเปิดโปรแกรมอีเมลของคุณ หรือคัดลอกข้อความเพื่อส่งด้วยตนเอง</p>
+      <p class="lang-ko">본 사이트는 가벼운 정적 사이트로 작동하므로 작성하신 내용이 이메일 프로그램에 자동으로 작성됩니다. 아래 버튼을 눌러 메일 앱을 실행하시거나 텍스트를 복사하여 보내주세요.</p>
       
       <div class="modal-code-box" id="modal-code-box"></div>
       
       <div class="modal-btns">
-        <button class="btn btn-secondary" id="modal-copy-btn">Copy Text</button>
-        <button class="btn btn-primary" id="modal-send-btn">Open Mail App & Send</button>
+        <button class="btn btn-secondary" id="modal-copy-btn">
+          <span class="lang-en">Copy Text</span>
+          <span class="lang-th">คัดลอกข้อความ</span>
+          <span class="lang-ko">텍스트 복사하기</span>
+        </button>
+        <button class="btn btn-primary" id="modal-send-btn">
+          <span class="lang-en">Open Mail App & Send</span>
+          <span class="lang-th">เปิดแอปอีเมลเพื่อส่ง</span>
+          <span class="lang-ko">메일 앱 열고 전송하기</span>
+        </button>
       </div>
       
-      <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1.5rem; cursor: pointer; text-decoration: underline;" id="modal-close">Close window</p>
+      <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1.5rem; cursor: pointer; text-decoration: underline;" id="modal-close">
+        <span class="lang-en">Close window</span>
+        <span class="lang-th">ปิดหน้าต่าง</span>
+        <span class="lang-ko">창 닫기</span>
+      </p>
     </div>
   </div>
 
@@ -692,6 +1139,67 @@ Generated securely from Pa Rang static portal.
     modalOverlay.addEventListener('click', (e) => {
       if (e.target === modalOverlay) closeModalFunction();
     });
+
+    // E. Language Switcher Logic
+    const placeholders = {
+      en: {
+        name: "e.g. Minji Kim",
+        email: "name@example.com",
+        discipline: "e.g. Visual Artist, Musician, Writer",
+        portfolio: "https://mywork.com or @handle",
+        dates: "e.g. November 1st (2 Weeks)",
+        proposal: "Briefly describe your creative work, your stay duration, and what you plan to share..."
+      },
+      th: {
+        name: "เช่น มินจี คิม",
+        email: "name@example.com",
+        discipline: "เช่น ทัศนศิลป์, นักดนตรี, นักเขียน",
+        portfolio: "https://mywork.com หรือ @ชื่อบัญชี",
+        dates: "เช่น 1 พฤศจิกายน (2 สัปดาห์)",
+        proposal: "อธิบายสั้นๆ เกี่ยวกับผลงานสร้างสรรค์ของคุณ ระยะเวลาเข้าพัก และสิ่งที่คุณตั้งใจจะแบ่งปัน..."
+      },
+      ko: {
+        name: "예: 김민지",
+        email: "name@example.com",
+        discipline: "예: 시각 예술가, 뮤지션, 작가",
+        portfolio: "https://mywork.com 또는 @계정명",
+        dates: "예: 11월 1일 (2주)",
+        proposal: "작가님의 예술 활동, 희망 입주 기간, 그리고 나누고자 하는 작업 계획을 간략히 소개해 주세요..."
+      }
+    };
+
+    function updateFormPlaceholders(lang) {
+      const data = placeholders[lang] || placeholders.en;
+      document.getElementById('form-name').placeholder = data.name;
+      document.getElementById('form-email').placeholder = data.email;
+      document.getElementById('form-discipline').placeholder = data.discipline;
+      document.getElementById('form-portfolio').placeholder = data.portfolio;
+      document.getElementById('form-dates').placeholder = data.dates;
+      document.getElementById('form-proposal').placeholder = data.proposal;
+    }
+
+    function setLanguage(lang) {
+      // 1. Set active class on body
+      document.body.className = `lang-${lang}`;
+      
+      // 2. Set active status on language buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelectorAll(`#btn-lang-${lang}`).forEach(btn => {
+        btn.classList.add('active');
+      });
+      
+      // 3. Update dynamic input placeholders
+      updateFormPlaceholders(lang);
+      
+      // 4. Store selection in local storage
+      localStorage.setItem('preferred-lang', lang);
+    }
+
+    // Set initial language from storage or default to English
+    const savedLang = localStorage.getItem('preferred-lang') || 'en';
+    setLanguage(savedLang);
   </script>
 </body>
 </html>
