@@ -1329,3 +1329,77 @@ body:not(.lang-ko) .lang-ko {
     animation: none;
   }
 }
+
+/* --- 12. Elegant FAQ Accordion Section --- */
+.faq-section {
+  background: #080908;
+  border-top: 1px solid var(--border-color);
+  padding: 6rem 0;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  margin-top: 3rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.faq-question:hover {
+  color: var(--accent-gold);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-answer p {
+  padding-top: 1rem;
+  margin: 0;
+}
+
+.faq-icon-plus {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  transition: transform var(--transition-fast);
+  user-select: none;
+  font-weight: 300;
+}
+
+.faq-item.active .faq-icon-plus {
+  transform: rotate(45deg);
+  color: var(--accent-clay);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 1000px;
+  transition: max-height 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+}
